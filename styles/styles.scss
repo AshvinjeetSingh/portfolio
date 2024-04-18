@@ -997,7 +997,8 @@ main {
     .about_section {
         @include themify($themes) {
             background-color: themed('alternateBg');
-            color: themed('alternateText')
+            color: themed('alternateText');
+            box-shadow: themed('alternateBg') 0px 13px 19px 8px;
         }
 
         // font-family: silkaregular;
@@ -1010,6 +1011,16 @@ main {
         transform: translateY(-15%);
         height: 100%;
         width: 45%;
+        position: relative;
+
+
+        .Scroll_heading {
+            position: absolute;
+            top: 2%;
+            font-size: 1.5em;
+            opacity: 1;
+            cursor: default;
+        }
 
         .intro {
             max-width: 62em;
@@ -1595,7 +1606,7 @@ main {
 
 .main_footer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 1em 1em;
 
@@ -1604,13 +1615,23 @@ main {
         color: themed("textColor");
     }
 
-    p {
-        margin: 0;
+    .inner_footer {
+        width: 100%;
+        max-width: 62em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        .heart {
-            margin-left: 4px;
+        p {
+            margin: 0;
+
+            .heart {
+                margin-left: 4px;
+            }
         }
     }
+
+
 }
 
 // #about-section {
@@ -1764,6 +1785,10 @@ main {
                 }
             }
         }
+
+        .inner_footer {
+            max-width: 48em;
+        }
     }
 }
 
@@ -1833,6 +1858,10 @@ main {
                     max-width: 42em;
                 }
             }
+        }
+
+        .inner_footer {
+            max-width: 42em;
         }
     }
 }
@@ -1915,6 +1944,10 @@ main {
                 //     max-width: 30em;
                 // }
             }
+        }
+
+        .inner_footer {
+            max-width: 30em;
         }
     }
 }
