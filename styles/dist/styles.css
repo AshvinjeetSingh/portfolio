@@ -1193,6 +1193,27 @@ main .bg_line {
   width: 100%;
 }
 
+.main_footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 1em;
+}
+.theme-light .main_footer {
+  background-color: #f3f3f3;
+  color: #000;
+}
+.theme-dark .main_footer {
+  background-color: #0c0c0c;
+  color: #fff;
+}
+.main_footer p {
+  margin: 0;
+}
+.main_footer p .heart {
+  margin-left: 4px;
+}
+
 @keyframes updown {
   from {
     transform: translateY(-50px);

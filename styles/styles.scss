@@ -1576,6 +1576,24 @@ main {
 
 }
 
+.main_footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 1em;
+    @include themify($themes) {
+        background-color: themed("backgroundColor");
+        color: themed("textColor");
+    }
+    p{
+        margin: 0;
+
+        .heart{
+            margin-left: 4px;
+        }
+    }
+}
+
 // #about-section {
 //     // max-width: 900px;
 //     display: flex;

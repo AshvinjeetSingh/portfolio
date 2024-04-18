@@ -25,6 +25,8 @@ const getDateTime = () => {
   var date = new Date();
   var time = date.toLocaleTimeString("en-US");
   x.innerText = time;
+  // console.log("date",date.getFullYear())
+  document.getElementById("year").innerText= date.getFullYear()
 };
 
 getDateTime();
