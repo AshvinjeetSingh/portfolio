@@ -267,82 +267,18 @@ gsap
         start: "top center",
         end: "bottom bottom",
         scrub: true,
-        markers: true,
+        // markers: true,
       },
 
       opacity: "1",
-    })
-    // .to(".about_section .whatcanIdo", {
-    //   opacity: "1",
-    // });
+    });
+ 
 
-// gsap.to(leftLink, {
-//   scrollTrigger: {
-//     trigger: ".about_section",
-//     start: "top center",
-//     end: "top center",
-//     scrub: true,
-//     markers:true
-//   },
-//   background:"transparent"
-// });
-
-// function helloTheme(theme) {
-//   var textColor = themes[theme].textColor;
-//   var alternateText = themes[theme].alternateText;
-//   var newColor;
-//   // cursor.style.borderColor = textColor;
-//   // rightLink.style.color = textColor;
-//   // console.log("info",theme,textColor,alternateText)
-//   leftLink &&
-//     leftLink.forEach((item) => {
-//       gsap.to(item, {
-//         scrollTrigger: {
-//           trigger: ".about_section",
-//           start: "top top",
-//           end: "bottom bottom",
-//           scrub: true,
-//           markers: true,
-//         },
-//         color: alternateText,
-//       });
-//     });
-//   // rightLink.style.color = newColor;
-//   gsap.to(rightLink, {
-//     scrollTrigger: {
-//       trigger: ".about_section",
-//       start: "top top",
-//       end: "bottom bottom",
-//       scrub: true,
-//       // markers: true,
-//       // onEnter: () => ScrollTrigger.direction = 1, // Scroll direction is down
-//       // onLeave: () => ScrollTrigger.direction = -1 ,// Scroll direction is up
-//       // onUpdate: (self) => {
-//       //   // Update text color based on scroll position
-//       //   // const progress = self.progress;
-//       //   console.log("before update ",alternateText,textColor)
-//       //  newColor =
-//       //     ScrollTrigger.direction === 1 ? alternateText : textColor;
-//       //   // console.log("interpolate",textColor,alternateText,newColor)
-//       //   rightLink.style.color = newColor;
-//       // },
-//     },
-//     color: alternateText,
-//   });
-//   gsap.to(cursor, {
-//     scrollTrigger: {
-//       trigger: ".about_section",
-//       start: "top top",
-//       end: "bottom bottom",
-//       scrub: true,
-//       // markers: true,
-//       // onUpdate: (self) => {
-//       //   // Update text color based on scroll position
-//       //   const progress = self.progress;
-//       //   newColor = gsap.utils.interpolate(textColor, alternateText, progress);
-//       //   cursor.style.borderColor = newColor;
-//       // },
-//     },
-//     borderColor: alternateText,
-//   });
-// }
+    document.querySelector(".contact_section .button").addEventListener("mouseover",()=>{
+      document.querySelector(".button__icon__bg").style.transform="scale(1)";
+      document.querySelector(".button__icon svg").style.opacity = "1";
+    });
+    document.querySelector(".contact_section .button").addEventListener("mouseleave",()=>{
+      document.querySelector(".button__icon__bg").style.transform="scale(0.2)";
+      document.querySelector(".button__icon svg").style.opacity = "0";
+    });
