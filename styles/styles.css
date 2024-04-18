@@ -30,6 +30,11 @@ html {
   width: 100%;
 }
 
+body .overflow_class,
+html .overflow_class {
+  overflow: hidden;
+}
+
 .side-elems {
   mix-blend-mode: difference;
 }
@@ -192,7 +197,6 @@ main {
 }
 
 main .line_container {
-  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -320,7 +324,6 @@ main .follow_cursor ::after {
 }
 
 main .nav-container {
-  position: sticky;
   top: 0;
   width: 100%;
   opacity: 0;
@@ -1186,22 +1189,31 @@ main .bg_line {
   padding: .25em 0;
   position: relative;
   font-family: 'silkaitalic';
+  text-decoration: none;
 }
 
 .work .project-wrapper .projects__footer p a::before {
+  content: "";
   display: block;
   position: absolute;
   bottom: .25em;
   left: 0;
   width: 100%;
-  height: 1px;
+  height: 2px;
   z-index: 2;
   will-change: transform, color;
   transform: scaleX(0);
   transform-origin: 100% 50%;
   transition: transform .35s;
   transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  background-color: #000;
+}
+
+.theme-light .work .project-wrapper .projects__footer p a::before {
+  background-color: #DF9D3F;
+}
+
+.theme-dark .work .project-wrapper .projects__footer p a::before {
+  background-color: #DF9D3F;
 }
 
 .work .project-wrapper .projects__footer p a:hover::before {

@@ -131,7 +131,15 @@ tl.from(".reveal .child", {
 }).to(".right-bar", {
   opacity: "1",
   duration: 0.5
-}, "-=0.5"); // Follow cursor
+}, "-=0.5").to("body", {
+  onComplete: removeClass
+}, "-=0.5");
+
+function removeClass() {
+  var mainLoader = document.querySelector("body");
+  mainLoader.classList.remove("overflow_class");
+} // Follow cursor
+
 
 gsap.set(cursor, {
   xPercent: -50,
