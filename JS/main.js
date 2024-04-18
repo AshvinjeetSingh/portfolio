@@ -248,6 +248,17 @@ var tl_about = gsap.timeline({
   },
 });
 tl_about
+  .to(".Scroll_heading", {
+    opacity: "0",
+    top: "3%",
+  })
+  .to(
+    ".about_section",
+    {
+      boxShadow: "none",
+    },
+    "-=0.3"
+  )
   .to(".about_heading h1 ", {
     top: "0px",
     opacity: "1",

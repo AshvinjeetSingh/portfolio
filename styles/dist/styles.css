@@ -713,14 +713,24 @@ main .bg_line {
   transform: translateY(-15%);
   height: 100%;
   width: 45%;
+  position: relative;
 }
 .theme-light .panel-about .about_section {
   background-color: #0c0c0c;
   color: #fff;
+  box-shadow: #0c0c0c 0px 13px 19px 8px;
 }
 .theme-dark .panel-about .about_section {
   background-color: #f3f3f3;
   color: #000;
+  box-shadow: #f3f3f3 0px 13px 19px 8px;
+}
+.panel-about .about_section .Scroll_heading {
+  position: absolute;
+  top: 2%;
+  font-size: 1.5em;
+  opacity: 1;
+  cursor: default;
 }
 .panel-about .about_section .intro {
   max-width: 62em;
@@ -1200,7 +1210,7 @@ main .bg_line {
 
 .main_footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   padding: 1em 1em;
 }
@@ -1212,10 +1222,17 @@ main .bg_line {
   background-color: #0c0c0c;
   color: #fff;
 }
-.main_footer p {
+.main_footer .inner_footer {
+  width: 100%;
+  max-width: 62em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.main_footer .inner_footer p {
   margin: 0;
 }
-.main_footer p .heart {
+.main_footer .inner_footer p .heart {
   margin-left: 4px;
 }
 
@@ -1282,6 +1299,9 @@ main .bg_line {
   main .contact .contact_section .container {
     max-width: 48em;
   }
+  main .inner_footer {
+    max-width: 48em;
+  }
 }
 @media screen and (max-width: 1600px) {
   main .hero-section .first_hero #player {
@@ -1322,6 +1342,9 @@ main .bg_line {
     max-width: 42em;
   }
   main .contact .contact_section .container {
+    max-width: 42em;
+  }
+  main .inner_footer {
     max-width: 42em;
   }
 }
@@ -1371,6 +1394,9 @@ main .bg_line {
     max-width: 30em;
   }
   main .contact .contact_section .container {
+    max-width: 30em;
+  }
+  main .inner_footer {
     max-width: 30em;
   }
 }
