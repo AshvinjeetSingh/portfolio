@@ -25,6 +25,8 @@ const getDateTime = () => {
   var date = new Date();
   var time = date.toLocaleTimeString("en-US");
   x.innerText = time;
+  // console.log("date",date.getFullYear())
+  document.getElementById("year").innerText= date.getFullYear()
 };
 
 getDateTime();
@@ -50,7 +52,11 @@ function addAnimation() {
 }
 let currentScroll = 0;
 let isScrollingDown = true;
-var tl = gsap.timeline();
+var tl = gsap.timeline(
+  // {
+  // oncomplete: document.querySelector("body").classList.remove("overflow_class"),
+// }
+);
 detectColorScheme();
 // Moon button set to be hidden by default
 // basic function to convert reveal class into sub elements
@@ -126,7 +132,13 @@ tl.from(".reveal .child", {
   .to(".hero-div", { opacity: "1", duration: 0.8 }, "-=0.1")
   .to(".first_hero", { opacity: "1", duration: 0.5 }, "-=0.2")
   .to(".left-social-links", { opacity: "1", duration: 0.5 })
-  .to(".right-bar", { opacity: "1", duration: 0.5 }, "-=0.5");
+  .to(".right-bar", { opacity: "1", duration: 0.5 }, "-=0.5")
+  .to("body", { onComplete: removeClass }, "-=0.5");
+
+    function removeClass() {
+      const mainLoader = document.querySelector("body");
+      mainLoader.classList.remove("overflow_class");
+    }
 
 // Follow cursor
 gsap.set(cursor, { xPercent: -50, yPercent: -50 });
@@ -240,45 +252,43 @@ tl_about
   .to(".about_section .intro .para p", {
     top: "0px",
     stagger: 0.1,
-  })
-  ;
+  });
 
+gsap.to(".about_section", {
+  scrollTrigger: {
+    trigger: ".about_section",
+    start: "-250px center",
+    end: "200px center",
+    scrub: true,
+    // markers:true
+  },
+  width: "100%",
+  borderRadius: "0px",
+  transform: "TranslateY(0%)",
+  duration: 1,
+});
 
+gsap.to(".about_section .whatcanIdo", {
+  scrollTrigger: {
+    trigger: ".about_section",
+    start: "top center",
+    end: "bottom bottom",
+    scrub: true,
+    // markers: true,
+  },
 
-gsap
-  .to(".about_section", {
-    scrollTrigger: {
-      trigger: ".about_section",
-      start: "-250px center",
-      end: "200px center",
-      scrub: true,
-      // markers:true
-    },
-    width: "100%",
-    borderRadius: "0px",
-    transform: "TranslateY(0%)",
-    duration: 1,
-  })
+  opacity: "1",
+});
 
-  gsap
-    .to(".about_section .whatcanIdo", {
-      scrollTrigger: {
-        trigger: ".about_section",
-        start: "top center",
-        end: "bottom bottom",
-        scrub: true,
-        // markers: true,
-      },
-
-      opacity: "1",
-    });
- 
-
-    document.querySelector(".contact_section .button").addEventListener("mouseover",()=>{
-      document.querySelector(".button__icon__bg").style.transform="scale(1)";
-      document.querySelector(".button__icon svg").style.opacity = "1";
-    });
-    document.querySelector(".contact_section .button").addEventListener("mouseleave",()=>{
-      document.querySelector(".button__icon__bg").style.transform="scale(0.2)";
-      document.querySelector(".button__icon svg").style.opacity = "0";
-    });
+document
+  .querySelector(".contact_section .button")
+  .addEventListener("mouseover", () => {
+    document.querySelector(".button__icon__bg").style.transform = "scale(1)";
+    document.querySelector(".button__icon svg").style.opacity = "1";
+  });
+document
+  .querySelector(".contact_section .button")
+  .addEventListener("mouseleave", () => {
+    document.querySelector(".button__icon__bg").style.transform = "scale(0.2)";
+    document.querySelector(".button__icon svg").style.opacity = "0";
+  });

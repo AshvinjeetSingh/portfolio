@@ -101,6 +101,11 @@ body,
 html {
     height: 100%;
     width: 100%;
+    // overflow: hidden;
+    
+    .overflow_class {
+        overflow: hidden;
+    }
     // background-image: radial-gradient(#e5e7eb 1px, transparent 0);
     // @include themify($themes) {
     //     background-color: themed('backgroundColor');
@@ -269,6 +274,7 @@ main {
     // min-height: calc(100vh - 28px);
     // font-family: silka_regular';
     // width: 100%;
+    // overflow: hidden;
 
     @include themify($themes) {
         color: themed('textColor');
@@ -283,7 +289,7 @@ main {
     // }
 
     .line_container {
-        position: fixed;
+        // position: fixed;
         top: 0;
         left: 0;
         width: 100%;
@@ -414,7 +420,7 @@ main {
     }
 
     .nav-container {
-        position: sticky;
+        // position: sticky;
         top: 0;
         width: 100%;
         opacity: 0;
@@ -1359,16 +1365,18 @@ main {
                     padding: .25em 0;
                     position: relative;
                     font-family: 'silkaitalic';
+                    text-decoration: none;
                     // font-style: italic;
 
 
                     &::before {
+                        content: "";
                         display: block;
                         position: absolute;
                         bottom: .25em;
                         left: 0;
                         width: 100%;
-                        height: 1px;
+                        height: 2px;
                         z-index: 2;
                         will-change: transform,
                             color;
@@ -1383,7 +1391,9 @@ main {
                             -webkit-transform .35s;
                         -webkit-transition-timing-function: cubic-bezier(.25, .46, .45, .94);
                         transition-timing-function: cubic-bezier(.25, .46, .45, .94);
-                        background-color: #000;
+                        @include themify($themes){
+                            background-color: themed("linkColor");
+                        }
                     }
 
                     &:hover {
@@ -1564,6 +1574,24 @@ main {
 
     }
 
+}
+
+.main_footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1em 1em;
+    @include themify($themes) {
+        background-color: themed("backgroundColor");
+        color: themed("textColor");
+    }
+    p{
+        margin: 0;
+
+        .heart{
+            margin-left: 4px;
+        }
+    }
 }
 
 // #about-section {
