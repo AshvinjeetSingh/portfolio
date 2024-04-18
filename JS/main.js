@@ -20,6 +20,9 @@ var modeChangerMoon = document.querySelector("#Moon");
 const scrollers = document.querySelectorAll(".scroller");
 const about_heading = document.querySelectorAll(".about_heading");
 
+
+
+
 gsap.registerPlugin(ScrollTrigger);
 const getDateTime = () => {
   var date = new Date();
@@ -31,25 +34,34 @@ const getDateTime = () => {
 
 getDateTime();
 
-if (!window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
-  addAnimation();
-}
-
-function addAnimation() {
-  scrollers.forEach((item) => {
-    item.setAttribute("data-animated", true);
-
-    const scrollerInner = item.querySelector(".loop-container");
-    const scrollerContent = Array.from(scrollerInner.children);
-    scrollerInner.style.animationDuration =
-      scrollerInner.offsetWidth / 150 + "s";
-    scrollerContent.forEach((i) => {
-      const duplicatedItem = i.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicatedItem);
-    });
+window.addEventListener("load", function () {
+  // Scroll to the top of the page
+  console.log("first",this.window)
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // Optional: smooth scrolling effect
   });
-}
+});
+
+// if (!window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
+//   addAnimation();
+// }
+
+// function addAnimation() {
+//   scrollers.forEach((item) => {
+//     item.setAttribute("data-animated", true);
+
+//     const scrollerInner = item.querySelector(".loop-container");
+//     const scrollerContent = Array.from(scrollerInner.children);
+//     scrollerInner.style.animationDuration =
+//       scrollerInner.offsetWidth / 150 + "s";
+//     scrollerContent.forEach((i) => {
+//       const duplicatedItem = i.cloneNode(true);
+//       duplicatedItem.setAttribute("aria-hidden", true);
+//       scrollerInner.appendChild(duplicatedItem);
+//     });
+//   });
+// }
 let currentScroll = 0;
 let isScrollingDown = true;
 var tl = gsap.timeline(

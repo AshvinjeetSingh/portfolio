@@ -47,6 +47,18 @@ html .overflow_class {
   color: #f3f3f3;
 }
 
+.side-elems-cursor {
+  mix-blend-mode: difference;
+}
+
+.theme-light .side-elems-cursor {
+  border: 2px solid #f3f3f3;
+}
+
+.theme-dark .side-elems-cursor {
+  border: 2px solid #f3f3f3;
+}
+
 .left-social-links {
   width: 40px;
   position: fixed;
@@ -182,6 +194,31 @@ html .overflow_class {
   background-color: #DF9D3F;
 }
 
+.follow_cursor {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  position: fixed;
+  display: none;
+  transition-duration: 100ms;
+  transition-timing-function: ease-out;
+  pointer-events: none;
+  z-index: 3;
+}
+
+.follow_cursor ::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  border: 8px solid gray;
+  border-radius: 50%;
+  opacity: .5;
+  top: -8px;
+  left: -8px;
+  animation: cursorAnim2 .5s infinite alternate;
+}
+
 main {
   position: relative;
 }
@@ -288,39 +325,6 @@ main #brownpage {
   width: 100%;
   z-index: 1;
   overflow: hidden;
-}
-
-main .follow_cursor {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  position: fixed;
-  display: none;
-  transition-duration: 100ms;
-  transition-timing-function: ease-out;
-  pointer-events: none;
-  z-index: 3;
-}
-
-.theme-light main .follow_cursor {
-  border: 2px solid #000;
-}
-
-.theme-dark main .follow_cursor {
-  border: 2px solid #fff;
-}
-
-main .follow_cursor ::after {
-  content: "";
-  width: 20px;
-  height: 20px;
-  position: absolute;
-  border: 8px solid gray;
-  border-radius: 50%;
-  opacity: .5;
-  top: -8px;
-  left: -8px;
-  animation: cursorAnim2 .5s infinite alternate;
 }
 
 main .nav-container {

@@ -35,24 +35,31 @@ var getDateTime = function getDateTime() {
 };
 
 getDateTime();
+window.addEventListener("load", function () {
+  // Scroll to the top of the page
+  console.log("first", this.window);
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth" // Optional: smooth scrolling effect
 
-if (!window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
-  addAnimation();
-}
-
-function addAnimation() {
-  scrollers.forEach(function (item) {
-    item.setAttribute("data-animated", true);
-    var scrollerInner = item.querySelector(".loop-container");
-    var scrollerContent = Array.from(scrollerInner.children);
-    scrollerInner.style.animationDuration = scrollerInner.offsetWidth / 150 + "s";
-    scrollerContent.forEach(function (i) {
-      var duplicatedItem = i.cloneNode(true);
-      duplicatedItem.setAttribute("aria-hidden", true);
-      scrollerInner.appendChild(duplicatedItem);
-    });
   });
-}
+}); // if (!window.matchMedia("(prefers-reduced-motion:reduce)").matches) {
+//   addAnimation();
+// }
+// function addAnimation() {
+//   scrollers.forEach((item) => {
+//     item.setAttribute("data-animated", true);
+//     const scrollerInner = item.querySelector(".loop-container");
+//     const scrollerContent = Array.from(scrollerInner.children);
+//     scrollerInner.style.animationDuration =
+//       scrollerInner.offsetWidth / 150 + "s";
+//     scrollerContent.forEach((i) => {
+//       const duplicatedItem = i.cloneNode(true);
+//       duplicatedItem.setAttribute("aria-hidden", true);
+//       scrollerInner.appendChild(duplicatedItem);
+//     });
+//   });
+// }
 
 var currentScroll = 0;
 var isScrollingDown = true;
