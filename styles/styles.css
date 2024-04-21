@@ -1531,11 +1531,34 @@ main .bg_line {
   main .hero-section .hero-div .floating_text p {
     font-size: calc(0.40em + 0.390625vw);
   }
+  main .panel-about .about_section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
   main .panel-about .about_section .intro {
     max-width: 42em;
+    margin-bottom: 1em;
+  }
+  main .panel-about .about_section .intro .about_heading h1 {
+    line-height: 32px;
+    font-size: calc(2em + 0.390625vw);
+  }
+  main .panel-about .about_section .intro .about_heading span {
+    margin-top: -4px;
+  }
+  main .panel-about .about_section .intro .para p {
+    line-height: 28px;
+    word-spacing: 1px;
+    font-size: 0.875em;
   }
   main .panel-about .about_section .whatcanIdo {
     max-width: 42em;
+  }
+  main .panel-about .about_section .whatcanIdo h2 {
+    margin-bottom: 1em;
+  }
+  main .panel-about .about_section .whatcanIdo .services__list p {
+    font-size: 0.875em;
   }
   main .contact .contact_section .contact_heading {
     max-width: 42em;

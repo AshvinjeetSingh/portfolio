@@ -1838,12 +1838,40 @@ main {
 
         .panel-about {
             .about_section {
+                padding-top: 80px;
+                padding-bottom: 80px;
                 .intro {
                     max-width: 42em;
+                    margin-bottom: 1em;
+                    .about_heading{
+                        h1{
+                            line-height: 32px;
+                            font-size: calc(2em + 0.390625vw);
+                        }
+                        span{
+                            margin-top: -4px;
+                        }
+                    }
+                    .para{
+                        p{
+                            line-height: 28px;
+                            word-spacing: 1px;
+                            font-size: 0.875em;
+                        }
+                    }
                 }
 
                 .whatcanIdo {
-                    max-width: 42em
+                    max-width: 42em;
+                    h2{
+                        margin-bottom: 1em;
+                    }
+
+                    .services__list{
+                        p{
+                            font-size: 0.875em;
+                        }
+                    }
                 }
             }
         }

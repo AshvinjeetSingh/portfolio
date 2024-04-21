@@ -315,3 +315,15 @@ document
     document.querySelector(".button__icon__bg").style.transform = "scale(0.2)";
     document.querySelector(".button__icon svg").style.opacity = "0";
   });
+
+
+
+  var myAnimation = new hoverEffect({
+    parent: document.querySelector(".my-div"),
+    intensity: 0.3,
+    image1: "../images/at.png",
+    image2: "../images/main_home_black.png",
+    displacementImage: "../images/main_home_white.png",
+  });
+
+  myAnimation()
