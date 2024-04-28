@@ -1072,7 +1072,7 @@ main {
             max-width: 62em;
             opacity: 0;
 
-            h2 {
+            h1 {
                 font-size: 2em;
                 margin-bottom: 2em;
             }
@@ -1840,20 +1840,24 @@ main {
             .about_section {
                 padding-top: 80px;
                 padding-bottom: 80px;
+
                 .intro {
                     max-width: 42em;
                     margin-bottom: 1em;
-                    .about_heading{
-                        h1{
+
+                    .about_heading {
+                        h1 {
                             line-height: 32px;
                             font-size: calc(2em + 0.390625vw);
                         }
-                        span{
+
+                        span {
                             margin-top: -4px;
                         }
                     }
-                    .para{
-                        p{
+
+                    .para {
+                        p {
                             line-height: 28px;
                             word-spacing: 1px;
                             font-size: 0.875em;
@@ -1863,12 +1867,14 @@ main {
 
                 .whatcanIdo {
                     max-width: 42em;
-                    h2{
-                        margin-bottom: 1em;
+                    .services__header{
+                        h1 {
+                            margin-bottom: 1em;
+                        }
                     }
 
-                    .services__list{
-                        p{
+                    .services__list {
+                        p {
                             font-size: 0.875em;
                         }
                     }
@@ -1948,24 +1954,93 @@ main {
 
         .panel-about {
             .about_section {
+                flex-direction: row;
+                gap: 2em;
                 .intro {
                     max-width: 30em;
+                    .about_heading {
+                        h1 {
+                            line-height: initial;
+                            font-size: calc(1.5em + 0.390625vw);
+                            margin: initial;
+                        }
+                        span{
+                            margin-top: 2px;
+                        }
+                    }
+
+                    .para {
+                        p {
+                            line-height: 20px;
+                            word-spacing: 1px;
+                            font-size: 0.75em;
+                        }
+                    }
                 }
 
                 .whatcanIdo {
-                    max-width: 30em
+                    max-width: 30em;
+                    .services__header{
+                        h1 {
+                            font-size: calc(1.5em + 0.390625vw);
+                            line-height: initial;
+                            margin: initial;
+                        }
+                    }
+
+                    .services__list {
+                        .services__item {
+                            h2{
+                                font-size: 1.25em;
+                            }
+                            p {
+                                font-size: calc(0.35em + 0.390625vw);
+                            }
+                        }
+                    }
+
                 }
             }
         }
 
         .contact {
             .contact_section {
-                .contact_heading {
-                    max-width: 30em;
-                }
 
                 .container {
                     max-width: 30em;
+
+                    .left-col{
+                        .row-1{
+                            h1{
+                                font-size: calc(1.5em + 0.390625vw);
+                                line-height: initial;
+                            }
+                        }
+
+                        .row-2{
+                            .button{
+                                column-gap: 0.35em;
+                                span{
+                                    font-size: 0.85em;
+                                }
+
+                                .button__icon{
+                                    width: 1.5em;
+                                    height: 1.5em;
+                                }
+                            }
+                            p{
+                                font-size: 12px;
+                                line-height: 16px;
+                            }
+                        }
+                    }
+
+                    .right-col {
+                        img{
+                            width: 80%;
+                        }
+                    }
                 }
 
                 // .para {
@@ -1980,7 +2055,21 @@ main {
     }
 }
 
+@media screen and (max-width:1024px) {
+    main {
+        .panel-about{
+             .about_section{
+                 .whatcanIdo{
+                    display: none;
+                 }
+             }
+        }
 
+        .main_footer{
+            padding: 1em 9em;
+        }
+    }
+}
 @media (max-width:768px) {
     #left-hero {
         flex: 0 0 100% !important;
