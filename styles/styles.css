@@ -900,7 +900,7 @@ main .bg_line {
   opacity: 0;
 }
 
-.panel-about .about_section .whatcanIdo h2 {
+.panel-about .about_section .whatcanIdo h1 {
   font-size: 2em;
   margin-bottom: 2em;
 }
@@ -1554,7 +1554,7 @@ main .bg_line {
   main .panel-about .about_section .whatcanIdo {
     max-width: 42em;
   }
-  main .panel-about .about_section .whatcanIdo h2 {
+  main .panel-about .about_section .whatcanIdo .services__header h1 {
     margin-bottom: 1em;
   }
   main .panel-about .about_section .whatcanIdo .services__list p {
@@ -1607,20 +1607,75 @@ main .bg_line {
   main .hero-section .hero-div .floating_text p {
     font-size: calc(0.3em + 0.390625vw);
   }
+  main .panel-about .about_section {
+    flex-direction: row;
+    gap: 2em;
+  }
   main .panel-about .about_section .intro {
     max-width: 30em;
+  }
+  main .panel-about .about_section .intro .about_heading h1 {
+    line-height: initial;
+    font-size: calc(1.5em + 0.390625vw);
+    margin: initial;
+  }
+  main .panel-about .about_section .intro .about_heading span {
+    margin-top: 2px;
+  }
+  main .panel-about .about_section .intro .para p {
+    line-height: 20px;
+    word-spacing: 1px;
+    font-size: 0.75em;
   }
   main .panel-about .about_section .whatcanIdo {
     max-width: 30em;
   }
-  main .contact .contact_section .contact_heading {
-    max-width: 30em;
+  main .panel-about .about_section .whatcanIdo .services__header h1 {
+    font-size: calc(1.5em + 0.390625vw);
+    line-height: initial;
+    margin: initial;
+  }
+  main .panel-about .about_section .whatcanIdo .services__list .services__item h2 {
+    font-size: 1.25em;
+  }
+  main .panel-about .about_section .whatcanIdo .services__list .services__item p {
+    font-size: calc(0.35em + 0.390625vw);
   }
   main .contact .contact_section .container {
     max-width: 30em;
   }
+  main .contact .contact_section .container .left-col .row-1 h1 {
+    font-size: calc(1.5em + 0.390625vw);
+    line-height: initial;
+  }
+  main .contact .contact_section .container .left-col .row-2 .button {
+    column-gap: 0.35em;
+  }
+  main .contact .contact_section .container .left-col .row-2 .button span {
+    font-size: 0.85em;
+  }
+  main .contact .contact_section .container .left-col .row-2 .button .button__icon {
+    width: 1.5em;
+    height: 1.5em;
+  }
+  main .contact .contact_section .container .left-col .row-2 p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  main .contact .contact_section .container .right-col img {
+    width: 80%;
+  }
   main .inner_footer {
     max-width: 30em;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  main .panel-about .about_section .whatcanIdo {
+    display: none;
+  }
+  main .main_footer {
+    padding: 1em 9em;
   }
 }
 
