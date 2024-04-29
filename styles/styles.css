@@ -1380,7 +1380,7 @@ main .bg_line {
 .contact .contact_section .container .left-col .row-2 .button .button__icon svg {
   width: 1.5em;
   height: 1.5em;
-  opacity: 0;
+  z-index: 99;
   transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
@@ -1572,6 +1572,27 @@ main .bg_line {
 }
 
 @media screen and (max-width: 1366px) {
+  .left-social-links ul li {
+    padding: 5px;
+  }
+  .left-social-links ul li a {
+    font-size: 20px;
+  }
+  .right-bar div.right-mail-link a {
+    font-size: 9px;
+  }
+  main #Sun svg {
+    width: 25px;
+    height: 25px;
+  }
+  main .nav-container .nav-brand {
+    max-width: 45px;
+  }
+  main .nav-container .nav-links a {
+    font-size: 12px;
+    padding: 18px;
+    letter-spacing: 0;
+  }
   main .hero-section .first_hero #player {
     max-width: 480px;
   }
@@ -1610,6 +1631,9 @@ main .bg_line {
   main .panel-about .about_section {
     flex-direction: row;
     gap: 2em;
+  }
+  main .panel-about .about_section .Scroll_heading {
+    font-size: 1.05em;
   }
   main .panel-about .about_section .intro {
     max-width: 30em;
@@ -1650,6 +1674,7 @@ main .bg_line {
   }
   main .contact .contact_section .container .left-col .row-2 .button {
     column-gap: 0.35em;
+    margin-top: 1em;
   }
   main .contact .contact_section .container .left-col .row-2 .button span {
     font-size: 0.85em;
