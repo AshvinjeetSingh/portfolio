@@ -126,6 +126,43 @@ html {
     // }
 }
 
+.line-left {
+    width: 3px;
+    height: 90px;
+    margin: 0px auto;
+    position: fixed;
+    bottom: 0;
+    left: 60px;
+    right: auto;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include themify($themes) {
+        background-color: themed('linkColor');
+    }
+}
+
+
+.line-right {
+    width: 3px;
+    height: 90px;
+    margin: 0px auto;
+    position: fixed;
+    bottom: 0;
+    left: auto;
+    right: 60px;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+
+    @include themify($themes) {
+        background-color: themed('linkColor');
+    }
+}
+
 .side-elems-cursor {
     @include themify($themes) {
         border: 2px solid themed('linkTextColors');
@@ -142,7 +179,7 @@ html {
 .left-social-links {
     width: 40px;
     position: fixed;
-    bottom: 0px;
+    bottom: 95px;
     left: 40px;
     right: auto;
     z-index: 1;
@@ -175,9 +212,6 @@ html {
 
         li {
             a {
-                // @include themify($themes) {
-                //     color: themed('textColor');
-                // }
 
                 font-size: 24px;
                 transition: 0.2s ease-in-out;
@@ -197,25 +231,14 @@ html {
             }
         }
 
-        &::after {
-            content: "";
-            display: block;
-            width: 3px;
-            height: 90px;
-            margin: 0px auto;
-            filter: invert(1);
 
-            @include themify($themes) {
-                background-color: themed('linkColor');
-            }
-        }
     }
 }
 
 .right-bar {
     width: 40px;
     position: fixed;
-    bottom: 0;
+    bottom: 95px;
     left: auto;
     right: 40px;
     z-index: 1;
@@ -251,35 +274,34 @@ html {
 
             transition: 0.2s ease-in-out;
 
-            &:hover {
-                text-decoration: none;
 
-                filter: invert(1);
 
-                @include themify($themes) {
-                    color: themed('linkColor');
-                }
+        }
 
-                transition: 0.2s ease-in-out;
-                transform: translateY(-5px);
+        &:hover {
+            text-decoration: none;
+
+            @include themify($themes) {
+                color: themed('linkColor');
             }
 
+            transition: 0.2s ease-in-out;
+            transform: translateY(-5px);
         }
-
 
     }
 
-    &::after {
-        content: "";
-        display: block;
-        width: 3px;
-        height: 90px;
-        margin: 0px auto;
+    // &::after {
+    //     content: "";
+    //     display: block;
+    //     width: 3px;
+    //     height: 90px;
+    //     margin: 0px auto;
 
-        @include themify($themes) {
-            background-color: themed('linkColor');
-        }
-    }
+    //     @include themify($themes) {
+    //         background-color: themed('linkColor');
+    //     }
+    // }
 }
 
 .follow_cursor {
@@ -1868,7 +1890,8 @@ main {
 
                 .whatcanIdo {
                     max-width: 42em;
-                    .services__header{
+
+                    .services__header {
                         h1 {
                             margin-bottom: 1em;
                         }
@@ -1903,37 +1926,41 @@ main {
 
 
 @media screen and (max-width:1366px) {
-    .left-social-links{
-        ul{
-            li{
+    .left-social-links {
+        ul {
+            li {
                 padding: 5px;
-                a{
+
+                a {
                     font-size: 20px;
                 }
             }
         }
-    } 
+    }
 
     .right-bar {
-        div.right-mail-link{
-            a{
+        div.right-mail-link {
+            a {
                 font-size: 9px;
             }
         }
-    } 
+    }
+
     main {
         #Sun {
-            svg{
+            svg {
                 width: 25px;
                 height: 25px;
             }
         }
-        .nav-container{
-            .nav-brand{
+
+        .nav-container {
+            .nav-brand {
                 max-width: 45px;
             }
-            .nav-links{
-                a{
+
+            .nav-links {
+                a {
                     font-size: 12px;
                     padding: 18px;
                     letter-spacing: 0;
@@ -1995,18 +2022,22 @@ main {
             .about_section {
                 flex-direction: row;
                 gap: 2em;
-                .Scroll_heading{
+
+                .Scroll_heading {
                     font-size: 1.05em;
                 }
+
                 .intro {
                     max-width: 30em;
+
                     .about_heading {
                         h1 {
                             line-height: initial;
                             font-size: calc(1.5em + 0.390625vw);
                             margin: initial;
                         }
-                        span{
+
+                        span {
                             margin-top: 2px;
                         }
                     }
@@ -2022,7 +2053,8 @@ main {
 
                 .whatcanIdo {
                     max-width: 30em;
-                    .services__header{
+
+                    .services__header {
                         h1 {
                             font-size: calc(1.5em + 0.390625vw);
                             line-height: initial;
@@ -2032,9 +2064,10 @@ main {
 
                     .services__list {
                         .services__item {
-                            h2{
+                            h2 {
                                 font-size: 1.25em;
                             }
+
                             p {
                                 font-size: calc(0.35em + 0.390625vw);
                             }
@@ -2051,28 +2084,30 @@ main {
                 .container {
                     max-width: 30em;
 
-                    .left-col{
-                        .row-1{
-                            h1{
+                    .left-col {
+                        .row-1 {
+                            h1 {
                                 font-size: calc(1.5em + 0.390625vw);
                                 line-height: initial;
                             }
                         }
 
-                        .row-2{
-                            .button{
+                        .row-2 {
+                            .button {
                                 column-gap: 0.35em;
                                 margin-top: 1em;
-                                span{
+
+                                span {
                                     font-size: 0.85em;
                                 }
 
-                                .button__icon{
+                                .button__icon {
                                     width: 1.5em;
                                     height: 1.5em;
                                 }
                             }
-                            p{
+
+                            p {
                                 font-size: 12px;
                                 line-height: 16px;
                             }
@@ -2080,7 +2115,7 @@ main {
                     }
 
                     .right-col {
-                        img{
+                        img {
                             width: 80%;
                         }
                     }
@@ -2100,19 +2135,20 @@ main {
 
 @media screen and (max-width:1024px) {
     main {
-        .panel-about{
-             .about_section{
-                 .whatcanIdo{
+        .panel-about {
+            .about_section {
+                .whatcanIdo {
                     display: none;
-                 }
-             }
+                }
+            }
         }
 
-        .main_footer{
+        .main_footer {
             padding: 1em 9em;
         }
     }
 }
+
 @media (max-width:768px) {
     #left-hero {
         flex: 0 0 100% !important;

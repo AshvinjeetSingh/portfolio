@@ -42,6 +42,46 @@ html .overflow_class {
   color: #f3f3f3;
 }
 
+.line-left {
+  width: 3px;
+  height: 90px;
+  margin: 0px auto;
+  position: fixed;
+  bottom: 0;
+  left: 60px;
+  right: auto;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.theme-light .line-left {
+  background-color: #DF9D3F;
+}
+.theme-dark .line-left {
+  background-color: #DF9D3F;
+}
+
+.line-right {
+  width: 3px;
+  height: 90px;
+  margin: 0px auto;
+  position: fixed;
+  bottom: 0;
+  left: auto;
+  right: 60px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.theme-light .line-right {
+  background-color: #DF9D3F;
+}
+.theme-dark .line-right {
+  background-color: #DF9D3F;
+}
+
 .side-elems-cursor {
   mix-blend-mode: difference;
 }
@@ -55,7 +95,7 @@ html .overflow_class {
 .left-social-links {
   width: 40px;
   position: fixed;
-  bottom: 0px;
+  bottom: 95px;
   left: 40px;
   right: auto;
   z-index: 1;
@@ -99,25 +139,11 @@ html .overflow_class {
 .theme-dark .left-social-links ul li a:hover {
   color: #DF9D3F;
 }
-.left-social-links ul::after {
-  content: "";
-  display: block;
-  width: 3px;
-  height: 90px;
-  margin: 0px auto;
-  filter: invert(1);
-}
-.theme-light .left-social-links ul::after {
-  background-color: #DF9D3F;
-}
-.theme-dark .left-social-links ul::after {
-  background-color: #DF9D3F;
-}
 
 .right-bar {
   width: 40px;
   position: fixed;
-  bottom: 0;
+  bottom: 95px;
   left: auto;
   right: 40px;
   z-index: 1;
@@ -146,30 +172,16 @@ html .overflow_class {
   writing-mode: vertical-rl;
   transition: 0.2s ease-in-out;
 }
-.right-bar div.right-mail-link a:hover {
+.right-bar div.right-mail-link:hover {
   text-decoration: none;
-  filter: invert(1);
   transition: 0.2s ease-in-out;
   transform: translateY(-5px);
 }
-.theme-light .right-bar div.right-mail-link a:hover {
+.theme-light .right-bar div.right-mail-link:hover {
   color: #DF9D3F;
 }
-.theme-dark .right-bar div.right-mail-link a:hover {
+.theme-dark .right-bar div.right-mail-link:hover {
   color: #DF9D3F;
-}
-.right-bar::after {
-  content: "";
-  display: block;
-  width: 3px;
-  height: 90px;
-  margin: 0px auto;
-}
-.theme-light .right-bar::after {
-  background-color: #DF9D3F;
-}
-.theme-dark .right-bar::after {
-  background-color: #DF9D3F;
 }
 
 .follow_cursor {
