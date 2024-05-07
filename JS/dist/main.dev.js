@@ -8,8 +8,6 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 gsap.registerPlugin(ScrollTrigger);
 var menu = document.querySelector(".nav-container");
 var root = document.documentElement;
-var mainElem = document.getElementById("og");
-var smallScreen = document.getElementById("smallScreen");
 var p1 = getComputedStyle(root);
 var leftLink = document.querySelectorAll(".left-social-links ul li a");
 var rightLink = document.querySelector(".right-mail-link a"); // console.log(p1.getPropertyValue())
@@ -26,29 +24,6 @@ var modeChangerSun = document.querySelector("#Sun");
 var modeChangerMoon = document.querySelector("#Moon");
 var scrollers = document.querySelectorAll(".scroller");
 var about_heading = document.querySelectorAll(".about_heading");
-
-function getScreenSize() {
-  var width = window.innerWidth;
-  var height = window.innerHeight;
-  return {
-    width: width,
-    height: height
-  };
-}
-
-window.onload = function () {
-  var screenSize = getScreenSize();
-  console.log("Screen size:", screenSize);
-
-  if (screenSize.width < 990) {
-    mainElem.style.display = "none";
-    smallScreen.style.display = "initial";
-  } else {
-    mainElem.style.display = "initial";
-    smallScreen.style.display = "none";
-  }
-};
-
 gsap.registerPlugin(ScrollTrigger);
 
 var getDateTime = function getDateTime() {
