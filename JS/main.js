@@ -3,6 +3,8 @@ import themes from "../variables.json";
 gsap.registerPlugin(ScrollTrigger);
 var menu = document.querySelector(".nav-container");
 var root = document.documentElement;
+var mainElem = document.getElementById("og");
+var smallScreen = document.getElementById("smallScreen");
 const p1 = getComputedStyle(root);
 var leftLink = document.querySelectorAll(".left-social-links ul li a");
 var rightLink = document.querySelector(".right-mail-link a");
@@ -21,6 +23,25 @@ const scrollers = document.querySelectorAll(".scroller");
 const about_heading = document.querySelectorAll(".about_heading");
 
 
+  function getScreenSize() {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    return { width, height };
+  }
+
+  window.onload = function () {
+    let screenSize = getScreenSize();
+    console.log("Screen size:", screenSize);
+    if (screenSize.width<990){
+      mainElem.style.display="none"
+      smallScreen.style.display = "initial";
+
+    }
+    else{
+       mainElem.style.display = "initial";
+       smallScreen.style.display = "none";
+    }
+  };
 
 
 gsap.registerPlugin(ScrollTrigger);
