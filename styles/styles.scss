@@ -1005,7 +1005,7 @@ main {
         width: 100%;
         z-index: -1;
     }
-}
+
 
 .panel-about {
     position: relative;
@@ -1266,7 +1266,7 @@ main {
 
                     .col {
                         flex: 1;
-                        border: 1px solid red;
+                        // border: 1px solid red;
                         border-radius: 10px;
                         height: 100%;
                         display: flex;
@@ -1656,6 +1656,19 @@ main {
 
 
 }
+}
+#smallScreen{
+    display: block;
+    .smallScreenDiv {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+        height: 100vh;
+
+    }
+}
+
 
 // #about-section {
 //     // max-width: 900px;

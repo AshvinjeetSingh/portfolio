@@ -6,7 +6,7 @@ var root = document.documentElement;
 const p1 = getComputedStyle(root);
 var leftLink = document.querySelectorAll(".left-social-links ul li a");
 var rightLink = document.querySelector(".right-mail-link a");
-var mainElem = document.getElementById("og");
+var mainElem = document.querySelector(".og");
 var smallScreen = document.getElementById("smallScreen");
 // console.log(p1.getPropertyValue())
 // var textOnly = document.querySelector(".text_only");
@@ -174,11 +174,13 @@ window.addEventListener("mousemove", (e) => {
     let screenSize = getScreenSize();
     console.log("Screen size:", screenSize);
     if (screenSize.width < 990) {
+      console.log("mainElem",mainElem)
+      smallScreen.style.display = "block";
       mainElem.style.display = "none";
-      smallScreen.style.display = "initial";
     } else {
-      mainElem.style.display = "initial";
+      console.log("mainElem", smallScreen.style);
       smallScreen.style.display = "none";
+      mainElem.style.display = "block";
     }
   };
 // cursor remove on work button hover homepage
