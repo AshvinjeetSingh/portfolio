@@ -10,7 +10,9 @@ var menu = document.querySelector(".nav-container");
 var root = document.documentElement;
 var p1 = getComputedStyle(root);
 var leftLink = document.querySelectorAll(".left-social-links ul li a");
-var rightLink = document.querySelector(".right-mail-link a"); // console.log(p1.getPropertyValue())
+var rightLink = document.querySelector(".right-mail-link a");
+var mainElem = document.querySelector(".og");
+var smallScreen = document.getElementById("smallScreen"); // console.log(p1.getPropertyValue())
 // var textOnly = document.querySelector(".text_only");
 // const myText = new SplitType(textOnly);
 // var textOnlyChar = document.querySelectorAll(".text_only .line .word .char");
@@ -163,7 +165,31 @@ window.addEventListener("mousemove", function (e) {
     x: clientX,
     y: clientY
   });
-}); // cursor remove on work button hover homepage
+});
+
+function getScreenSize() {
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  return {
+    width: width,
+    height: height
+  };
+}
+
+window.onload = function () {
+  var screenSize = getScreenSize();
+  console.log("Screen size:", screenSize);
+
+  if (screenSize.width < 990) {
+    console.log("mainElem", mainElem);
+    smallScreen.style.display = "block";
+    mainElem.style.display = "none";
+  } else {
+    console.log("mainElem", smallScreen.style);
+    smallScreen.style.display = "none";
+    mainElem.style.display = "block";
+  }
+}; // cursor remove on work button hover homepage
 // workBtn.onmouseover = () => {
 //   cursor.style.display = "none";
 // };
@@ -171,6 +197,7 @@ window.addEventListener("mousemove", function (e) {
 //   cursor.style.display = "block";
 // };
 //Mode changer button for Sun/Moon icon
+
 
 modeChangerMoon.addEventListener("click", function () {
   localStorage.setItem("theme", "light");
