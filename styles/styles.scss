@@ -2077,6 +2077,61 @@ main {
                 }
             }
         }
+        .work {
+            .project-wrapper {
+                .projects__header {
+                    h1 {
+                        font-size: calc(1.95em + 0.390625vw);
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+
+                .projects__list {
+                    .projects_title {
+                        h3 {
+                            font-size: 1.23em;
+                            margin-top: 4px;
+                        }
+                    }
+
+                    .project_links {
+                        ul {
+                            li {
+                                a {
+                                    font-size: 0.75em;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .col-left {
+                    .row.row-2 {
+                        gap: 0.5em;
+
+                        .col {
+                            padding: 8px;
+                            font-size: 1em;
+                            flex: 0.25;
+                            height: 75%;
+                        }
+                    }
+                }
+
+                .projects__footer {
+                    h3 {
+                        font-size: 0.95em;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
 
         .contact {
             .contact_section {
@@ -2143,6 +2198,60 @@ main {
             }
         }
 
+        .work {
+            .project-wrapper {
+                .projects__header {
+                    h1 {
+                        font-size: calc(1.5em + 0.390625vw);
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+
+                .projects__list {
+                    .projects_title {
+                        h3 {
+                            font-size: 0.95em;
+                        }
+                    }
+
+                    .project_links {
+                        ul {
+                            li {
+                                a {
+                                    font-size: 0.95em;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .col-left {
+                    .row.row-2 {
+                        gap: 0.25em;
+
+                        .col {
+                            padding: 4px;
+                            font-size: 1em;
+                            flex: 0.25;
+                            height: 75%;
+                        }
+                    }
+                }
+
+                .projects__footer {
+                    h3 {
+                        font-size: 0.95em;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
         .main_footer {
             padding: 1em 9em;
         }

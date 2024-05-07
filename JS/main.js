@@ -6,6 +6,8 @@ var root = document.documentElement;
 const p1 = getComputedStyle(root);
 var leftLink = document.querySelectorAll(".left-social-links ul li a");
 var rightLink = document.querySelector(".right-mail-link a");
+var mainElem = document.getElementById("og");
+var smallScreen = document.getElementById("smallScreen");
 // console.log(p1.getPropertyValue())
 // var textOnly = document.querySelector(".text_only");
 // const myText = new SplitType(textOnly);
@@ -161,6 +163,24 @@ window.addEventListener("mousemove", (e) => {
   gsap.to(cursor, { x: clientX, y: clientY });
 });
 
+
+  function getScreenSize() {
+    let width = window.innerWidth;
+    let height = window.innerHeight;
+    return { width, height };
+  }
+
+  window.onload = function () {
+    let screenSize = getScreenSize();
+    console.log("Screen size:", screenSize);
+    if (screenSize.width < 990) {
+      mainElem.style.display = "none";
+      smallScreen.style.display = "initial";
+    } else {
+      mainElem.style.display = "initial";
+      smallScreen.style.display = "none";
+    }
+  };
 // cursor remove on work button hover homepage
 // workBtn.onmouseover = () => {
 //   cursor.style.display = "none";

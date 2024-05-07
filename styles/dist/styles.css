@@ -1479,6 +1479,34 @@ main .bg_line {
   main .panel-about .about_section .whatcanIdo .services__list .services__item p {
     font-size: calc(0.35em + 0.390625vw);
   }
+  main .work .project-wrapper .projects__header h1 {
+    font-size: calc(1.95em + 0.390625vw);
+  }
+  main .work .project-wrapper .projects__header p {
+    font-size: 12px;
+  }
+  main .work .project-wrapper .projects__list .projects_title h3 {
+    font-size: 1.23em;
+    margin-top: 4px;
+  }
+  main .work .project-wrapper .projects__list .project_links ul li a {
+    font-size: 0.75em;
+  }
+  main .work .project-wrapper .col-left .row.row-2 {
+    gap: 0.5em;
+  }
+  main .work .project-wrapper .col-left .row.row-2 .col {
+    padding: 8px;
+    font-size: 1em;
+    flex: 0.25;
+    height: 75%;
+  }
+  main .work .project-wrapper .projects__footer h3 {
+    font-size: 0.95em;
+  }
+  main .work .project-wrapper .projects__footer p {
+    font-size: 12px;
+  }
   main .contact .contact_section .container {
     max-width: 30em;
   }
@@ -1511,6 +1539,33 @@ main .bg_line {
 @media screen and (max-width: 1024px) {
   main .panel-about .about_section .whatcanIdo {
     display: none;
+  }
+  main .work .project-wrapper .projects__header h1 {
+    font-size: calc(1.5em + 0.390625vw);
+  }
+  main .work .project-wrapper .projects__header p {
+    font-size: 12px;
+  }
+  main .work .project-wrapper .projects__list .projects_title h3 {
+    font-size: 0.95em;
+  }
+  main .work .project-wrapper .projects__list .project_links ul li a {
+    font-size: 0.95em;
+  }
+  main .work .project-wrapper .col-left .row.row-2 {
+    gap: 0.25em;
+  }
+  main .work .project-wrapper .col-left .row.row-2 .col {
+    padding: 4px;
+    font-size: 1em;
+    flex: 0.25;
+    height: 75%;
+  }
+  main .work .project-wrapper .projects__footer h3 {
+    font-size: 0.95em;
+  }
+  main .work .project-wrapper .projects__footer p {
+    font-size: 12px;
   }
   main .main_footer {
     padding: 1em 9em;
