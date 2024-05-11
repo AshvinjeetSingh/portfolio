@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/Providers/theme-provider"
 import localFont from 'next/font/local'
+import styles from "./fonts.module.scss"
 
 
 const osbourne = localFont({
@@ -33,10 +34,19 @@ const osbourne = localFont({
       style: 'Black',
     },
   ],
-  variable:'--osbourne'
+  variable:'--osbourne',
 })
 
-// const inter = Inter({ subsets: ["latin"] });s
+const silka = localFont({
+  src: [
+    {
+      path: '../../public/Fonts/silka-regular-webfont.woff',
+      weight: '400',
+      style: 'normal',
+    },
+  ],
+  variable: '--silka',
+})
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -50,7 +60,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={osbourne.className}>
+      <body className={silka.className}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"

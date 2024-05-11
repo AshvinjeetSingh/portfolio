@@ -3,8 +3,15 @@ import React, { useEffect, useState } from 'react'
 import styles from './style.module.scss';
 import { opacity, slideUp } from './anim';
 import { motion } from 'framer-motion';
+import { Bebas_Neue } from '@next/font/google';
 const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
 type Props = {}
+
+const Bebas = Bebas_Neue({
+  weight: ['400'],
+  preload: false
+})
+
 
 const Preloader = (props: Props) => {
   const [index, setIndex] = useState(0);
@@ -36,7 +43,7 @@ const Preloader = (props: Props) => {
   }
 
   return (
-    <motion.div variants={slideUp} initial="initial" exit="exit" className={styles.introduction}>
+    <motion.div variants={slideUp} initial="initial" exit="exit" className={`${styles.introduction} ${Bebas.className}`}>
       {dimension.width > 0 &&
         <>
           <motion.p variants={opacity} initial="initial" animate="enter"><span></span>{words[index]}</motion.p>

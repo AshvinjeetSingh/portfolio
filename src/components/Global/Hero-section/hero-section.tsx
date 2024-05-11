@@ -2,8 +2,16 @@ import React from 'react'
 import LeftLink from '../Links/left-links'
 import RightLink from '../Links/right-link'
 import { HeroHighlight } from './hero-highlight'
+import {Bebas_Neue} from "@next/font/google";
+import localFont from "@next/font/local";
+
 
 type Props = {}
+const Bebas= Bebas_Neue({
+    weight:['400'],
+    preload: false
+})
+
 
 const HeroSection = (props: Props) => {
   return (
@@ -20,15 +28,15 @@ const HeroSection = (props: Props) => {
 
               <div className="text-left flex justify-center items-baseline flex-col z-20">
                   {/* <DotLottiePlayer/> */}
-                  <h3 className="leading-7 font-light uppercase tracking-wide text-gray-400 text-sm mb-0.5 z-2 cursor-default">Web developer</h3>
-                  <h4 className="leading-16 font-extrabold uppercase tracking-wide text-4xl mb-4 z-2 cursor-default">Crafting Digital Experiences<br />Where Art Meets Functionality
+                  <h3 className={`leading-7 font-light uppercase tracking-wide text-gray-400 text-sm mb-0.5 z-2 cursor-default`}>Web developer</h3>
+                  <h4 className={`leading16 font-extrabold uppercase tracking-wide text-5xl mb-4 z-2 cursor-default ${Bebas.className}`}>Crafting Digital Experiences<br />Where Art Meets Functionality
                   </h4>
-                  <p className="leading-8 font-light tracking-wide text-md capitalize  mb-20 z-2 cursor-default">Crafting Innovative Solutions Tailored Specifically to Capture and Amplify the Essence of Your
+                  <p className={`leading-6 font-light tracking-wide text-lg capitalize  mb-20 z-2 cursor-default`}>Crafting Innovative Solutions Tailored Specifically to Capture and Amplify the Essence of Your
                       Distinct Brand
                       Identity,
                       Elevating Your Online Presence to Unprecedented Heights of Recognition and Impact.</p>
 
-                  <div className="flex justify-between w-full text-sm font-light flex-wrap">
+                  <div className={` flex justify-between w-full text-sm font-light flex-wrap `}>
                       <div >
 
                           <p>Currently Available for<br />Freelance Projects</p>
