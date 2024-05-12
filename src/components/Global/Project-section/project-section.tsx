@@ -7,17 +7,24 @@ import {
     IconSignature,
     IconTableColumn,
 } from "@tabler/icons-react";
+import { Bebas_Neue } from "@next/font/google"
+
+const Bebas = Bebas_Neue({
+    weight: ['400'],
+    preload: false
+})
+
 
 export default function Projects() {
     return (
         <section className="h-full w-full  dark:bg-black bg-white rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
 
             <div className='text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left py-36'>
-                <div>
+                <div className="flex relative items-end text-3xl justify-between after:h-[3px] after:w-full after:bg-amber-400 after:absolute after:bottom-0 mb-8 pb-8">
                     <div>
-                        <h1>Selected Work</h1><span>(3)</span>
+                        <h1 className="uppercase leading-none flex items-start">SELECTED WORK <span className="text-xs pl-2">[3]</span></h1>
                     </div>
-                    <p>A piece from my selection of favorites</p>
+                    <p className="text-xs">A piece from my selection of favorites</p>
                 </div>
                 <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
                     {items.map((item, i) => (
