@@ -15,6 +15,10 @@ import {LampComponent} from "../lamp";
 import Image from "next/image";
 import { Github } from "lucide-react";
 import styles from "./styles.module.scss"
+import image1 from "@/../public/Images/Autopulse.png"
+import image2 from "@/../public/Images/main_home_black.png"
+import image3 from "@/../public/Images/knowYourCoin.png"
+import image4 from "@/../public/Images/Eng4.png"
 
 const Bebas = Bebas_Neue({
     weight: ['400'],
@@ -24,7 +28,7 @@ const Bebas = Bebas_Neue({
 
 export default function Projects() {
     return (
-        <section className="h-full w-full  dark:bg-black bg-white rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
+        <section className="h-full w-full  dark:bg-black bg-white rounded-md  !overflow-visible relative flex flex-col items-center  antialiased" id="projects">
                 <div className='text-lg md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left py-36'>
                 <LampComponent/>
                 {/* <div className="flex relative items-end text-3xl justify-between after:h-[3px] after:w-full after:bg-amber-400 after:absolute after:bottom-0 mb-8 pb-8">
@@ -44,6 +48,7 @@ export default function Projects() {
                             icon={item.icon}
                             githubLink={item.Githublink}
                             websiteLink={item.websiteLink}
+                            backgroundImage={item.backgroundImage}
                         />
                     ))}
                 </BentoGrid>
@@ -64,8 +69,11 @@ export default function Projects() {
 
     );
 }
+const  Images=[
+
+]
 const Skeleton = () => (
-    <div className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black">
+    <div className={`flex flex-1 w-full h-full min-h-[6rem] rounded-xl   dark:bg-dot-white/[0.2] bg-dot-black/[0.2] [mask-image:radial-gradient(ellipse_at_center,white,transparent)]  border border-transparent dark:border-white/[0.2] bg-neutral-100 dark:bg-black`}>
         {/* <Image src={Github} alt="img" fill/> */}
     </div>
 );
@@ -77,7 +85,8 @@ const items = [
         className: "md:col-span-2",
         icon: <IconClipboardCopy className="h-6 w-6 text-neutral-500" />,
         Githublink:"https://github.com/AshvinjeetSingh/AutoPulse",
-        websiteLink:"https://ashvinjeet.dev/"
+        websiteLink:"https://ashvinjeet.dev/",
+        backgroundImage: "/images/Autopulse.png"
     },
     {
         title: "Portfolio",
@@ -86,7 +95,8 @@ const items = [
         className: "md:col-span-1",
         icon: <IconFileBroken className="h-6 w-6 text-neutral-500" />,
         Githublink: "https://github.com/AshvinjeetSingh/Portfolio",
-        websiteLink:"https://ashvinjeet.dev/"
+        websiteLink:"https://ashvinjeet.dev/",
+        backgroundImage: "/images/main_home_black.png"
     },
     {
         title: "Know Your Coin",
@@ -95,7 +105,8 @@ const items = [
         className: "md:col-span-1",
         icon: <IconSignature className="h-6 w-6 text-neutral-500" />,
         Githublink: "https://github.com/AshvinjeetSingh/knowyourcoinV2",
-        websiteLink:"https://knowyourcoinv2.netlify.app/"
+        websiteLink:"https://knowyourcoinv2.netlify.app/",
+        backgroundImage: "/images/knowYourCoin.png"
     },
     {
         title: "Engineering 4.0",
@@ -105,6 +116,7 @@ const items = [
         className: "md:col-span-2",
         icon: <IconTableColumn className="h-6 w-6 text-neutral-500" />,
         Githublink: "https://github.com/engineering4-0/website",
-        websiteLink:"https://engineering4-0.club/"
+        websiteLink:"https://engineering4-0.club/",
+        backgroundImage: "/images/Eng4.png"
     },
 ];

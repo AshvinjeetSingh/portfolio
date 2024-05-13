@@ -15,7 +15,7 @@ const Bebas= Bebas_Neue({
 
 const HeroSection = (props: Props) => {
   return (
-      <section className="h-full w-full  bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased">
+      <section className="h-full w-full  bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased" id="hero">
           {/* LEFT LINK START */}
           <LeftLink />
           {/* <!-- LEFT LINK END--> */}

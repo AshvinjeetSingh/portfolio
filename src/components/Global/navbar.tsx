@@ -6,6 +6,7 @@ import { ModeToggle } from './mode-toggle'
 import Logo_Light from "../../../public/Images/logo.svg"
 import Logo_Dark from "../../../public/Images/logo_2.svg"
 import { useTheme } from 'next-themes'
+import HamburgerMenu from './hamburger-menu'
 
 type Props = {}
 
@@ -14,7 +15,6 @@ const Navbar = (props: Props) => {
     useEffect(()=>{
         theme
     },[])
-    console.log(theme)
     return (
         <header className='fixed right-0 left-0 top-0 py-4 px-4 dark:bg-black/40 bg-white/20 backdrop-blur-lg z-[100] flex items-center border-b-[1px] dark:border-neutral-900  justify-between text-gray-900 dark:text-white'>
             <aside className='flex items-center gap-[2px]'>
@@ -25,22 +25,22 @@ const Navbar = (props: Props) => {
             <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block ">
                 <ul className="flex items-center gap-20 list-none font-semibold">
                     <li className='text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 '>
-                        <Link href="#">Home</Link>
+                        <Link href="#home">Home</Link>
                     </li>
                     <li className='text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 '>
-                        <Link href="#">About</Link>
+                        <Link href="#about">About</Link>
                     </li>
                     <li className='text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 '>
-                        <Link href="#">Projects</Link>
+                        <Link href="#projects">Projects</Link>
                     </li>
                     <li className='text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 '>
-                        <Link href="#">Contact</Link>
+                        <Link href="#contact">Contact</Link>
                     </li>
                 </ul>
             </nav>
             <aside className="flex items-center gap-4">
                 <ModeToggle />
-                <MenuIcon className="md:hidden" />
+                <HamburgerMenu/>
             </aside>
         </header>
     )

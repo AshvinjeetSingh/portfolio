@@ -1,6 +1,7 @@
 import { cn } from "@/lib/utils";
 import { Github, LinkedinIcon } from "lucide-react";
 import { IconBrandGithub, IconShare2 } from "@tabler/icons-react"
+import Image from "next/image";
 
 export const BentoGrid = ({
     className,
@@ -29,6 +30,7 @@ export const BentoGridItem = ({
     icon,
     githubLink,
     websiteLink,
+    backgroundImage,
 }: {
     className?: string;
     title?: string | React.ReactNode;
@@ -37,7 +39,9 @@ export const BentoGridItem = ({
     icon?: React.ReactNode;
     githubLink?: string;
     websiteLink?: string;
+    backgroundImage?: any;
 }) => {
+    console.log("backgroundImage", backgroundImage)
     return (
         <div
             className={cn(
@@ -45,7 +49,17 @@ export const BentoGridItem = ({
                 className
             )}
         >
-            {header}
+            <div className="w-full aspect-w-16 aspect-h-10 bg-gray-100 rounded-tr-lg rounded-tl-lg overflow-hidden xl:aspect-w-16 xl:aspect-h-10 relative">
+                {/* <Image
+                    src="/images/Autopulse.png"
+                    alt="thumbnail"
+                    layout="fill"
+                    objectFit="cover"
+                    className={`group-hover:scale-95 group-hover:rounded-2xl transform object-cover transition duration-200 `}
+                /> */}
+                <img src={backgroundImage}
+                    alt="thumbnail" className={`group-hover:scale-95 group-hover:rounded-2xl transform transition duration-200  w-full h-auto`}/>
+            </div>
             <div className="flex flex-col  transition duration-200">
                 <div className="flex w-full  justify-between items-baseline">
                 {icon}

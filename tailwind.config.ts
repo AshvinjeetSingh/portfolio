@@ -22,8 +22,8 @@ const config = {
       },
     },
     extend: {
-      lineHeight:{
-        leading16:"3.25em", 
+      lineHeight: {
+        leading16: "3.25em",
       },
       colors: {
         border: "hsl(var(--border))",
@@ -79,7 +79,15 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
-      
+      backgroundImage: {
+        1: "url(/images/Autopulse.png)",
+        2: "url(/images/main_home_black.png)",
+        3: "url(/images/knowYourCoin.png)",
+        4: "url(/images/main_Eng4.png)",
+        "hero": "url('/images/Autopulse.png')",
+        "basic-bg": "url('/images/Autopulse.png')",
+        "team-bg": "url('/images/Autopulse.png')",
+      },
     },
   },
   plugins: [
