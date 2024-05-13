@@ -69,7 +69,7 @@ const AboutSection = (props: Props) => {
                         <div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200'>
                             <span><img src="../images/rhom.svg" alt="icon" className='mb-4'/></span>
                             <h2 className={`${Bebas.className} text-3xl mb-2`}>Design</h2>
-                            <p className={` text-base font-normal leading-6`}> make web designs that engage your audience and create the user experience you want.</p>
+                            <p className={`text-base font-normal leading-6`}> make web designs that engage your audience and create the user experience you want.</p>
                         </div>
                         <div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200'><span className='mb-4'><img src="../images/parrallelogram.svg" alt="icon" className='mb-4' /></span>
                             <h2 className={`${Bebas.className} text-3xl mb-2`}>Development</h2>

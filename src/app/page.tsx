@@ -8,7 +8,7 @@ import Preloader from "@/components/Global/Preloader";
 import Projects from "@/components/Global/Project-section/project-section";
 import ContactSection from "@/components/Global/Contact-section/contact-section";
 import Footer from "@/components/Global/Footer";
-import StickyCursor from "@/components/Global/sticky-cursor/sticky-cursor";
+import { LampComponent } from "@/components/Global/lamp";
 
 type Props = {}
 export default function Home(props:Props) {
@@ -40,7 +40,6 @@ export default function Home(props:Props) {
       <Projects/>
       <ContactSection/>
       <Footer />
-      <StickyCursor/>
     </main>
   );
 }
