@@ -4,7 +4,7 @@ import styles from './style.module.scss';
 import { opacity, slideUp } from './anim';
 import { motion } from 'framer-motion';
 import { Bebas_Neue } from '@next/font/google';
-const words = ["Hello", "Bonjour", "Ciao", "Olà", "やあ", "Hallå", "Guten tag", "Hallo"]
+const words = ["Developer", "Designer", "Problem Solver", "Craftman", "Hello/Bonjour"]
 type Props = {}
 
 const Bebas = Bebas_Neue({

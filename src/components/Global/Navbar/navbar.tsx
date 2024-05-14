@@ -2,12 +2,11 @@ import { MenuIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React, { useEffect } from 'react'
-import { ModeToggle } from './mode-toggle'
-import Logo_Light from "../../../public/Images/logo.svg"
-import Logo_Dark from "../../../public/Images/logo_2.svg"
+import { ModeToggle } from '../mode-toggle'
+import Logo_Light from "../../../../public/Images/logo.svg"
+import Logo_Dark from "../../../../public/Images/logo_2.svg"
 import { useTheme } from 'next-themes'
-import HamburgerMenu from './hamburger-menu'
-
+import HamburgerMenu from '../Hamburger-menu/hamburger-menu'
 type Props = {}
 
 const Navbar = (props: Props) => {
@@ -15,6 +14,9 @@ const Navbar = (props: Props) => {
     useEffect(()=>{
         theme
     },[])
+
+
+
     return (
         <header className='fixed right-0 left-0 top-0 py-4 px-4 dark:bg-black/40 bg-white/20 backdrop-blur-lg z-[100] flex items-center border-b-[1px] dark:border-neutral-900  justify-between text-gray-900 dark:text-white'>
             <aside className='flex items-center gap-[2px]'>
@@ -40,7 +42,7 @@ const Navbar = (props: Props) => {
             </nav>
             <aside className="flex items-center gap-4">
                 <ModeToggle />
-                <HamburgerMenu/>
+                <HamburgerMenu />
             </aside>
         </header>
     )

@@ -1,5 +1,5 @@
 "use client"
-import Navbar from "@/components/Global/navbar";
+import Navbar from "@/components/Global/Navbar/navbar";
 import HeroSection from "@/components/Global/Hero-section/hero-section";
 import AboutSection from "@/components/Global/About-section/about-section";
 import { useEffect, useState } from "react";
