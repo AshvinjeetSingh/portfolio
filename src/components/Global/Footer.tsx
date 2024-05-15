@@ -60,14 +60,7 @@ const Logos = ({ scrollProgress }) => {
                 }
 
             </motion.div>
-
-
-
-
-
-
-        </div>
-             
+        </div>     
     )
 }
 
