@@ -36,23 +36,7 @@ const AboutSection = (props: Props) => {
                
                 <div>
                     <p className='text-base overflow-hidden tracking-wide leading-8 relative font-normal'>
-                        {/* Hey there! I'm a software developer with experience from HSBC and have a Master's degree from
-                        the University of
-                        Windsor. I've got a
-                        thing for crafting cool stuff on the web, especially when it comes to software development
-                        especially
-                        frontend
-                        techniques.
-                        <br />
-                        I'm all about that sweet spot where creativity meets tech. I get a kick out of working on
-                        frontend
-                        projects that not
-                        only look awesome but also run like a well-oiled machine. You know, the kind that challenges
-                        you
-                        to
-                        make
-                        things both
-                        super fast and super slick. */}
+                      
                             
                                 {
                                     phrase1.split(" ").map((word, index) => {

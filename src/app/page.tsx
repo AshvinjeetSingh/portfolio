@@ -8,8 +8,6 @@ import Preloader from "@/components/Global/Preloader";
 import Projects from "@/components/Global/Project-section/project-section";
 import ContactSection from "@/components/Global/Contact-section/contact-section";
 import Footer from "@/components/Global/Footer";
-import { LampComponent } from "@/components/Global/lamp";
-import Banner from "@/components/Global/Banner";
 
 type Props = {}
 export default function Home(props:Props) {
@@ -39,7 +37,6 @@ export default function Home(props:Props) {
       <HeroSection />
       <AboutSection />
       <Projects/>
-      {/* <Banner/> */}
       <ContactSection/>
       <Footer />
     </main>
