@@ -65,7 +65,7 @@ export const BentoGridItem = ({
                 {icon}
                     <ul className="flex">
                         <li className=" pl-3 text-neutral-700 dark:text-white transition-all duration-500 "><a href={githubLink}><IconBrandGithub className="h-6 w-6 transition-all duration-500  text-neutral-500 hover:text-amber-500 dark:hover:text-amber-500" /></a></li>
-                        <li className="pl-3 text-neutral-700 dark:text-white transition-all duration-500 "><a href={websiteLink}><IconShare2 className=" transition-all duration-500  hover:text-amber-500 dark:hover:text-amber-500 h-6 w-6 text-neutral-500" /></a></li>
+                        {websiteLink && <li className="pl-3 text-neutral-700 dark:text-white transition-all duration-500 "><a href={websiteLink}><IconShare2 className=" transition-all duration-500  hover:text-amber-500 dark:hover:text-amber-500 h-6 w-6 text-neutral-500" /></a></li>}
                         
                     </ul>
                 </div>

@@ -29,14 +29,33 @@ const Bebas = Bebas_Neue({
 export default function Projects() {
     return (
         <section className="h-full w-full  dark:bg-black bg-white rounded-md  !overflow-visible relative flex flex-col items-center  antialiased" id="projects">
-                <div className='text-lg md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left py-36'>
-                <LampComponent/>
+                <div className='text-lg md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left pt-36 pb-18'>
+                {/* <LampComponent/> */}
                 {/* <div className="flex relative items-end text-3xl justify-between after:h-[3px] after:w-full after:bg-amber-400 after:absolute after:bottom-0 mb-8 pb-8">
                     <div>
                         <h1 className={`${Bebas.className} uppercase leading-none flex items-start text-5xl z-20`}>SELECTED WORK <span className="text-lg pl-1 text-gray-foreground flex leading-none">[3]</span></h1>
                     </div>
                     <p className="text-sm">A piece from my selection of favorites</p>
                 </div> */}
+
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 ,}}
+                    transition={{
+                        delay: 0.1,
+                        duration: 0.5,
+                        ease: 'easeInOut',
+                    }}
+                    // viewport={{ once: true, amount: 0.5 }}
+                    className="flex relative items-end text-3xl justify-between after:h-[3px] after:w-full after:bg-amber-400 after:absolute after:bottom-0 mb-8 pb-8"
+                >
+
+                    <div>
+                        <h1 className={`${Bebas.className} uppercase leading-none flex items-start text-5xl z-20`}>SELECTED WORK <span className="text-lg pl-1 text-gray-foreground flex leading-none">[3]</span></h1>
+                    </div>
+                    <p className="text-sm">A piece from my selection of favorites</p>
+
+                </motion.div>
                 <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
                     {items.map((item, i) => (
                         <BentoGridItem
@@ -52,7 +71,12 @@ export default function Projects() {
                         />
                     ))}
                 </BentoGrid>
-                <div className="relative mt-8">
+                <motion.div className="relative mt-8" initial={{ opacity: 0, y: -50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{
+                        delay: 0.3,
+                        duration: 0.8,
+                        ease: 'easeInOut'}} >
                     <div className="mt-8 before:absolute before:h-[3px] before:w-full before:bg-amber-400 before:top-0 mb-8 pb-8">
                         <h3 className={`${Bebas.className} text-3xl uppercase`}>Want to see more?</h3>
                         <p className={`text-lg font-normal`}> Reach me out at
@@ -62,7 +86,7 @@ export default function Projects() {
 
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
             </section>
 
@@ -85,7 +109,7 @@ const items = [
         className: "md:col-span-2",
         icon: <IconClipboardCopy className="h-6 w-6 text-neutral-500" />,
         Githublink:"https://github.com/AshvinjeetSingh/AutoPulse",
-        websiteLink:"https://ashvinjeet.dev/",
+        websiteLink:"",
         backgroundImage: "/images/Autopulse.png"
     },
     {

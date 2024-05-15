@@ -9,7 +9,7 @@ const LeftLink = (props: Props) => {
     <>
       <div className={styles.left_social_links}>
           <ul>
-              <li className="p-3 text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 "><a href="https://github.com/AshvinjeetSingh"><Github /></a></li>
+              <li className="p-3 text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 mix-blend-difference "><a href="https://github.com/AshvinjeetSingh"><Github /></a></li>
               <li className="p-3 text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="www.linkedin.com/in/ashvinjeetsingh"><LinkedinIcon /></a></li>
               <li className="p-3 text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="https://twitter.com/AshvinjeetS"><Twitter /></a></li>
           </ul>

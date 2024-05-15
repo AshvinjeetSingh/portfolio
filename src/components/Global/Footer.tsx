@@ -2,49 +2,60 @@
 import React, { useEffect, useRef } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
+import { Bebas_Neue } from '@next/font/google';
+import { Github, LinkedinIcon, Twitter } from 'lucide-react';
 
 type Props = {}
 // @ts-ignore
+const Bebas = Bebas_Neue({
+    weight: ['400'],
+    preload: false
+})
 const Footer = (props: Props) => {
     const container = useRef();
-    const paths = useRef([]);
+
     const { scrollYProgress } = useScroll({
         target: container,
         offset: ['start end', 'end end']
     })
 
-    useEffect(() => {
-        scrollYProgress.on("change", e => {
-            paths.current.forEach((path, i) => {
-                path.setAttribute("startOffset", -40 + (i * 40) + (e * 40) + "%");
-            })
-        })
-    }, [])
+
 
     return (
-        <div ref={container} className='dark:bg-black bg-white rounded-md'>
-            <svg className="w-screen mb-40" viewBox="0 0 250 90">
-                <path fill="none" id="curve" d="m0,88.5c61.37,0,61.5-68,126.5-68,58,0,51,68,123,68" />
-                <text className="text-lg uppercase text-amber-400 fill-current">
-                    {
-                        [...Array(1)].map((_, i) => {
-                            return <textPath key={i} ref={ref => paths.current[i] = ref} startOffset={i * 40 + "%"} href="#curve">Developer &#9650; Designer &#9650; Problem Solver</textPath>
-                        })
-                    }
-                </text>
-            </svg>
+
+        <div ref={container}>
             <Logos scrollProgress={scrollYProgress} />
         </div>
+
     )
+
 }
 
-const Logos = ({ scrollProgress}) => {
-    const y = useTransform(scrollProgress, [0, 1], [-700, 0])
+
+
+const Logos = ({ scrollProgress }) => {
+    const y = useTransform(scrollProgress, [0, 1], [-225, 0])
     return (
-        <div className="h-[16px] dark:bg-black bg-white rounded-md  !overflow-visible">
-            <motion.div style={{ y }} className="h-full dark:bg-black bg-white rounded-md flex justify-center gap-10 items-center p-10">
-                <p className='w-full text-center text-xl text-black dark:text-white'>Made with Love</p>
+        <div className="w-screen h-[250px] bg-black dark:bg-white overflow-hidden">
+            <motion.div style={{ y }} className={`${Bebas.className} w-full h-full bg-black dark:bg-white font-strong text-5xl uppercase  text-white dark:text-black flex justify-center gap-10 items-center p-10`}>
+                {
+                    // [...Array(5)].map((_, i) => {
+                    //     return <img key={`img_${i}`} className="w-[80px] h-[80px]" src={`/medias/${i + 1}.jpg`} />
+                    // })\
+                    " Made With Love"
+                }
+
             </motion.div>
+
+            
+                <ul className='flex text-white dark:text-black'>
+                    <li className="p-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 mix-blend-difference "><a href="https://github.com/AshvinjeetSingh"><Github /></a></li>
+                    <li className="p-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="www.linkedin.com/in/ashvinjeetsingh"><LinkedinIcon /></a></li>
+                    <li className="p-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="https://twitter.com/AshvinjeetS"><Twitter /></a></li>
+                </ul>
+            
+
+
         </div>
     )
 }
