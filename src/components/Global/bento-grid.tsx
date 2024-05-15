@@ -41,7 +41,7 @@ export const BentoGridItem = ({
     websiteLink?: string;
     backgroundImage?: any;
 }) => {
-    console.log("backgroundImage", backgroundImage)
+    // console.log("backgroundImage", backgroundImage)
     return (
         <div
             className={cn(

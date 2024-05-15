@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import LeftLink from '../Links/left-links'
 import RightLink from '../Links/right-link'
 import { HeroHighlight } from './hero-highlight'
@@ -19,11 +19,13 @@ const HeroSection = (props: Props) => {
     // const [time, setTime] = useState(post.frontmatter.date)
     const phrase = "Crafting Digital Experiences";
     const phrase2 = "Where Art Meets Functionality";
-    
+    let date = new Date();
     const heading = useRef(null);
     const isInView2 = useInView(heading)
     const para = useRef(null);
     const isInView = useInView(para)
+    
+    
     return (
         <section className="h-full w-full  bg-neutral-950 rounded-md  !overflow-visible relative flex flex-col items-center  antialiased" id="hero">
             {/* LEFT LINK START */}
@@ -50,7 +52,7 @@ const HeroSection = (props: Props) => {
                     </h4>
                     <motion.p ref={para} className={`leading-6 font-light tracking-wide text-lg capitalize  mb-20 z-2 cursor-default`} variants={opacity} animate={isInView ? "open" : "closed"} >Crafting Innovative Solutions Tailored Specifically to Capture and Amplify the Essence of Your
                         Distinct Brand
-                        Identity,
+                       Identity,
                         Elevating Your Online Presence to Unprecedented Heights of Recognition and Impact.</motion.p>
 
                     <div className={` flex justify-between w-full text-sm font-light flex-wrap `}>
@@ -59,7 +61,7 @@ const HeroSection = (props: Props) => {
                             <p>Currently Available for<br />Freelance Projects</p>
                         </div>
                         <p>Based in <br />Toronto,CN <span></span></p>
-                        <p>My Local Time:<br /><span id="l_time">
+                        <p>My Local Time:<br /><span id="l_time">{date.toDateString()}
                         </span></p>
                     </div>
                 </div>
