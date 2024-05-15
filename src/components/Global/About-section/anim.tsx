@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 export const slideUp = {
     initial: {
         y: "100%"

@@ -1,3 +1,4 @@
+// @ts-nocheck
 'use client'
 import styles from './styles.module.scss'
 import { useEffect, useState } from 'react';

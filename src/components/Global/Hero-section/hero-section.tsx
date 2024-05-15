@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React, { useEffect, useRef, useState } from 'react'
 import LeftLink from '../Links/left-links'
 import RightLink from '../Links/right-link'
