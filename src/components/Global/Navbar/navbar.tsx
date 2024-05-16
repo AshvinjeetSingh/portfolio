@@ -27,16 +27,16 @@ const Navbar = (props: Props) => {
             <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block ">
                 <ul className="flex items-center gap-20 list-none font-semibold">
                     <li className='text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 '>
-                        <Link href="#home">Home</Link>
+                        <Link href="#home" className='2xl:text-sm lg:text-xs'>Home</Link>
                     </li>
                     <li className='text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 '>
-                        <Link href="#about">About</Link>
+                        <Link href="#about" className='2xl:text-sm lg:text-xs'>About</Link>
                     </li>
                     <li className='text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 '>
-                        <Link href="#projects">Projects</Link>
+                        <Link href="#projects" className='2xl:text-sm lg:text-xs'>Projects</Link>
                     </li>
                     <li className='text-neutral-700 dark:text-white transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 '>
-                        <Link href="#contact">Contact</Link>
+                        <Link href="#contact" className='2xl:text-sm lg:text-xs'>Contact</Link>
                     </li>
                 </ul>
             </nav>

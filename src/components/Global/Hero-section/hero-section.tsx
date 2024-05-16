@@ -37,13 +37,13 @@ const HeroSection = (props: Props) => {
             <RightLink />
             {/* <!-- rIGHT LINK END--> */}
             {/* <TextGenerateEffect words={Words} /> */}
-            <HeroHighlight className="text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto z-10 flex justify-between align-baseline">
+            <HeroHighlight className="text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white lg:max-w-3xl   2xl:max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto z-10 flex justify-between align-baseline">
 
 
                 <div className="text-left flex justify-center items-baseline flex-col z-20" ref={heading}>
                     {/* <DotLottiePlayer/> */}
                     <h3 className={`leading-7 font-light uppercase tracking-wide text-gray-400 text-sm mb-0.5 z-2 cursor-default`}>Web developer</h3>
-                    <h4 className={`[&>*:nth-child(1)]:gap-2 leading16 font-extrabold uppercase tracking-wide text-5xl mb-4 z-2 cursor-default ${Bebas.className}`}>
+                    <h4 className={`[&>*:nth-child(1)]:gap-2 leading16 font-extrabold uppercase tracking-wide lg:text-4xl 2xl:text-5xl mb-4 z-2 cursor-default ${Bebas.className}`}>
                         {phrase.split(" ").map((word, index) => {
                             return <span key={index} className="mr-2 relative overflow-hidden inline-flex [&>*:nth-child(2)]:text-base  [&>*:nth-child(2)]:font-light  [&>*:nth-child(2)]:w-[80%]]"><motion.span variants={slideUp} custom={index} animate={isInView2 ? "open" : "closed"} key={index}>{`${word}\t`}</motion.span></span>
                         })}
@@ -52,12 +52,12 @@ const HeroSection = (props: Props) => {
                             return <span key={index} className="mr-2 relative overflow-hidden inline-flex [&>*:nth-child(2)]:text-base  [&>*:nth-child(2)]:font-light  [&>*:nth-child(2)]:w-[80%]]"><motion.span variants={slideUp} custom={index} animate={isInView2 ? "open" : "closed"} key={index}>{`${word}\t`}</motion.span></span>
                         })}
                     </h4>
-                    <motion.p ref={para} className={`leading-6 font-light tracking-wide text-lg capitalize  mb-20 z-2 cursor-default`} variants={opacity} animate={isInView ? "open" : "closed"} >Crafting Innovative Solutions Tailored Specifically to Capture and Amplify the Essence of Your
+                    <motion.p ref={para} className={`leading-6 font-light tracking-wide 2xl:text-lg lg:text-sm capitalize  2xl:mb-20 lg:mb-10 z-2 cursor-default`} variants={opacity} animate={isInView ? "open" : "closed"} >Crafting Innovative Solutions Tailored Specifically to Capture and Amplify the Essence of Your
                         Distinct Brand
                        Identity,
                         Elevating Your Online Presence to Unprecedented Heights of Recognition and Impact.</motion.p>
 
-                    <div className={` flex justify-between w-full text-sm font-light flex-wrap `}>
+                    <div className={` flex justify-between w-full 2xl:text-sm lg:text-xs font-light flex-wrap `}>
                         <div >
 
                             <p>Currently Available for<br />Freelance Projects</p>

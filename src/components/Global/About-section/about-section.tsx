@@ -28,25 +28,25 @@ const AboutSection = (props: Props) => {
     return (
         <section className="h-full w-full  dark:bg-black bg-white rounded-md  !overflow-visible relative flex flex-col items-center  antialiased" id="about">
 
-            <div className='text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left py-36'>
+            <div className='text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl lg:max-w-3xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left pt-36 pb-18 '>
 
 
                 <div className={`mb-9 `} ref={description}>
-                    <h1 className={`${Bebas.className}  text-5xl  uppercase leading-10 relative z-20 mb-4 flex`}>About me <span className='text-lg pl-1 text-gray-foreground flex leading-none'>[2]</span></h1>
+                    <h1 className={`${Bebas.className}  text-5xl lg:text-4xl  uppercase leading-10 relative z-20 mb-4 flex`}>About me <span className='text-lg lg:text-base pl-1 text-gray-foreground flex leading-none'>[2]</span></h1>
                
                 <div>
-                    <p className='text-base overflow-hidden tracking-wide leading-8 relative font-normal'>
+                    <p className='text-base lg:text-sm overflow-hidden tracking-wide leading-8 relative font-normal'>
                       
                             
                                 {
                                     phrase1.split(" ").map((word, index) => {
-                                        return <span key={index} className="mx-1 relative overflow-hidden inline-flex [&>*:nth-child(2)]:text-base  [&>*:nth-child(2)]:font-light  [&>*:nth-child(2)]:w-[80%]]"><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{`${word}\t`}</motion.span></span>
+                                        return <span key={index} className="mr-1 lg:mb-1 lg:mr-1 relative overflow-hidden inline-flex [&>*:nth-child(2)]:text-base  [&>*:nth-child(2)]:font-light  [&>*:nth-child(2)]:w-[80%]]"><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{`${word}\t`}</motion.span></span>
                                     })
                                 }
                                 <br/>
                                 {
                                     phrase2.split(" ").map((word, index) => {
-                                        return <span key={index} className="mx-1 relative overflow-hidden inline-flex [&>*:nth-child(2)]:text-base  [&>*:nth-child(2)]:font-light  [&>*:nth-child(2)]:w-[80%]]"><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{`${word}\t`}</motion.span></span>
+                                        return <span key={index} className="mr-1 lg:mr-1 lg:mb-1 relative overflow-hidden inline-flex [&>*:nth-child(2)]:text-base  [&>*:nth-child(2)]:font-light  [&>*:nth-child(2)]:w-[80%]]"><motion.span variants={slideUp} custom={index} animate={isInView ? "open" : "closed"} key={index}>{`${word}\t`}</motion.span></span>
                                     })
                                 }
                             
@@ -56,7 +56,7 @@ const AboutSection = (props: Props) => {
                 <div>
 
 
-                    <div className={`${Bebas.className} text-4xl uppercase leading-9 mb-8`}>
+                    <div className={`${Bebas.className} lg:text-3xl text-4xl uppercase leading-9 mb-8`}>
                         <h1>I can help you with ...</h1>
                     </div>
                     {/* content: "";
@@ -71,16 +71,16 @@ const AboutSection = (props: Props) => {
                     <div className='grid md:grid-cols-3 md:gap-x-5 relative overflow-hidden gap-y-5'>
                         <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} animate={isInView ? "open" : "closed"}>
                             <span><img src="../images/rhom.svg" alt="icon" className='mb-4'/></span>
-                            <h2 className={`${Bebas.className} text-3xl mb-2`}>Design</h2>
-                            <p className={`text-base font-normal leading-6`}> make web designs that engage your audience and create the user experience you want.</p>
+                            <h2 className={`${Bebas.className} lg:text-2xl text-3xl mb-2`}>Design</h2>
+                            <p className={`text-base lg:text-sm font-normal leading-6`}> make web designs that engage your audience and create the user experience you want.</p>
                         </motion.div>
                         <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} animate={isInView ? "open" : "closed"}><span className='mb-4'><img src="../images/parrallelogram.svg" alt="icon" className='mb-4' /></span>
-                            <h2 className={`${Bebas.className} text-3xl mb-2`}>Development</h2>
-                            <p className={` text-base font-normal leading-6`}>Bringing visuals to life through developing highly functional web solutions.</p>
+                            <h2 className={`${Bebas.className} lg:text-2xl text-3xl mb-2`}>Development</h2>
+                            <p className={` text-base lg:text-sm font-normal leading-6`}>Bringing visuals to life through developing highly functional web solutions.</p>
                         </motion.div>
                         <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} animate={isInView ? "open" : "closed"}><span><img src="../images/triangle.svg" alt="icon" className='mb-4' /></span>
-                            <h2 className={`${Bebas.className} text-3xl mb-2`}>SEO</h2>
-                            <p className={` text-base font-normal leading-6`}>Jazzing up your online game, boosting visibility in search rankings and digital
+                            <h2 className={`${Bebas.className} lg:text-2xl text-3xl mb-2`}>SEO</h2>
+                            <p className={` text-base lg:text-sm font-normal leading-6`}>Jazzing up your online game, boosting visibility in search rankings and digital
                                 landscape!</p>
                         </motion.div>
                     </div>

@@ -8,7 +8,7 @@ const RightLink = (props: Props) => {
         <>
             
                 <div className={`${styles.right_email_link} flex flex-col justify-center  items-center relative`}>
-                    <a href="mailto:Ashvinjeetsingh22@gmail.com" className="rotate-90 my-4 hover:transition-all duration-500 hover:text-gray-muted dark:hover:text-gray-muted dark:hover:transition-all hover:-translate-y-2">Ashvinjeetsingh22@gmail.com</a>
+                    <a href="mailto:Ashvinjeetsingh22@gmail.com" className="lg:text-xs text-sm rotate-90 my-4 hover:transition-all duration-500 hover:text-gray-muted dark:hover:text-gray-muted dark:hover:transition-all hover:-translate-y-2">Ashvinjeetsingh22@gmail.com</a>
                 </div>
 
            

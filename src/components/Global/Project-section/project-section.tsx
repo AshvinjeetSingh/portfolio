@@ -31,7 +31,7 @@ const Bebas = Bebas_Neue({
 export default function Projects() {
     return (
         <section className="h-full w-full  dark:bg-black bg-white rounded-md  !overflow-visible relative flex flex-col items-center  antialiased" id="projects">
-                <div className='text-lg md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left pt-36 pb-18'>
+                <div className='text-lg md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white lg:max-w-3xl max-w-4xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left pt-36 pb-18'>
                 {/* <LampComponent/> */}
                 {/* <div className="flex relative items-end text-3xl justify-between after:h-[3px] after:w-full after:bg-amber-400 after:absolute after:bottom-0 mb-8 pb-8">
                     <div>
@@ -49,11 +49,11 @@ export default function Projects() {
                         ease: 'easeInOut',
                     }}
                     // viewport={{ once: true, amount: 0.5 }}
-                    className="flex relative items-end text-3xl justify-between after:h-[3px] after:w-full after:bg-amber-400 after:absolute after:bottom-0 mb-8 pb-8"
+                    className="flex relative items-end text-3xl justify-between after:h-[3px] after:w-full after:bg-amber-400 after:absolute after:bottom-0 mb-8 pb-8 lg:mb-4 lg:pb-4"
                 >
 
                     <div>
-                        <h1 className={`${Bebas.className} uppercase leading-none flex items-start text-5xl z-20`}>SELECTED WORK <span className="text-lg pl-1 text-gray-foreground flex leading-none">[3]</span></h1>
+                        <h1 className={`${Bebas.className} uppercase leading-none flex items-start lg:text-4xl text-5xl z-20`}>SELECTED WORK <span className="lg:text-base text-lg pl-1 text-gray-foreground flex leading-none">[3]</span></h1>
                     </div>
                     <p className="text-sm">A piece from my selection of favorites</p>
 
@@ -79,11 +79,11 @@ export default function Projects() {
                         delay: 0.3,
                         duration: 0.8,
                         ease: 'easeInOut'}} >
-                    <div className="mt-8 before:absolute before:h-[3px] before:w-full before:bg-amber-400 before:top-0 mb-8 pb-8">
-                        <h3 className={`${Bebas.className} text-3xl uppercase`}>Want to see more?</h3>
-                        <p className={`text-lg font-normal`}> Reach me out at
+                    <div className="mt-8 lg:mt-4 before:absolute before:h-[3px] before:w-full before:bg-amber-400 before:top-0 mb-8 pb-8 lg:mb-4 lg:pb-4">
+                        <h3 className={`${Bebas.className} text-3xl lg:text-2xl uppercase`}>Want to see more?</h3>
+                        <p className={`text-lg font-normal lg:text-sm`}> Reach me out at
                             <Button variant="ghost"><a href="mailto:Ashvinjeetsingh22@gmail.com"
-                            className={`${styles.link} no-underline text-lg italic font-medium`}>Ashvinjeetsingh22@gmail.com</a></Button>
+                            className={`${styles.link} no-underline text-lg lg:text-base italic font-medium`}>Ashvinjeetsingh22@gmail.com</a></Button>
 
 
                         </p>

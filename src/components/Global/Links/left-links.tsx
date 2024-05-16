@@ -9,14 +9,15 @@ const LeftLink = (props: Props) => {
     <>
       <div className={styles.left_social_links}>
           <ul>
-              <li className="p-3  transition-all duration-500 hover:-translate-y-2 "><a href="https://github.com/AshvinjeetSingh"><Github /></a></li>
-              <li className="p-3  transition-all duration-500 hover:-translate-y-2"><a href="www.linkedin.com/in/ashvinjeetsingh"><LinkedinIcon /></a></li>
-              <li className="p-3  transition-all duration-500 hover:-translate-y-2"><a href="https://twitter.com/AshvinjeetS"><Twitter /></a></li>
+          <li className="p-3  transition-all duration-500 hover:-translate-y-2 "><a href="https://github.com/AshvinjeetSingh"><Github className='w-[18px] h-[18px] text-xs' /></a></li>
+          <li className="p-3  transition-all duration-500 hover:-translate-y-2"><a href="www.linkedin.com/in/ashvinjeetsingh"><LinkedinIcon className='w-[18px] h-[18px] text-xs' /></a></li>
+          <li className="p-3  transition-all duration-500 hover:-translate-y-2"><a href="https://twitter.com/AshvinjeetS"><Twitter className='w-[18px] h-[18px] text-xs' /></a></li>
           </ul>
       </div>
       <div className={styles.side_line_left}></div>
       </>
   )
 }
+
 
 export default LeftLink

@@ -95,3 +95,13 @@
         display: none;
     }
 }
+
+@media screen and (max-width:1366px) {
+    .left_social_links {
+    }
+
+    .right_email_link {
+        bottom: 100px;
+    }
+
+}

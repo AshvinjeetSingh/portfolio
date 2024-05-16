@@ -47,7 +47,7 @@ const Logos = ({ scrollProgress }) => {
                     //     return <img key={`img_${i}`} className="w-[80px] h-[80px]" src={`/medias/${i + 1}.jpg`} />
                     // })\
                     <>
-                        <p className={`${Bebas.className} w-full h-full bg-black dark:bg-white font-strong text-5xl uppercase  text-white dark:text-black flex justify-center gap-2 items- p-10`}>
+                        <p className={`${Bebas.className} w-full h-full bg-black dark:bg-white font-strong lg:text-4xl text-5xl uppercase  text-white dark:text-black flex justify-center gap-2 items- p-10`}>
                             Made With Love<span className='text-sm'>&copy;2024</span>
                         </p>
                         <ul className='flex text-white dark:text-black'>
