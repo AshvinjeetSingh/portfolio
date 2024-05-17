@@ -19,7 +19,6 @@
     column-gap: 1em;
     border-radius: 10px;
     text-decoration: none;
-    max-width: 225px;
     width: 100%;
     max-height: 56px;
     width: 100%;
@@ -71,33 +70,21 @@
             }
           }
 
-          @media screen and (max-width:768px) {
+          @media screen and (min-width:768px) and (max-width:990px){
               .body {
                 flex-wrap: wrap;
               }
           }
           
 
-          @media screen and (max-width:1366px){
+          @media screen and (min-width:990px) and (max-width:1366px) {
             .button {
             
              padding: .25em .15em .25em 1.0em;
              column-gap: 0.75em;
-             max-width: 175px;
              width: 100%;
              max-height: 48px;
              width: 100%;
 
-              .button__icon {
-               
-
-                .button__icon__bg {
-                 
-                }
-
-                svg {
-
-              }
-          }
         }
-      }
+        }

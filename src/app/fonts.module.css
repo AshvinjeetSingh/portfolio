@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@font-face {
+  font-family: 'silkaregular';
+  src: url("/public/Fonts/silka-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'silkaitalic';
+  src: url("/public/Fonts/silka-regularitalic-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'silkaregular';
+  src: url("/public/Fonts/silka-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'osbourne';
+  src: url("/public/Fonts/OsbournePro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.silka {
+  font-family: silkaregular;
+}
+
+.bebas {
+  font-family: "Bebas Neue", sans-serif;
+}
+
+.osbourne {
+  font-family: osbourne;
+}
+/*# sourceMappingURL=fonts.module.css.map */

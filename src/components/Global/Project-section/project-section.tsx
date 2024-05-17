@@ -53,9 +53,9 @@ export default function Projects() {
                 >
 
                     <div>
-                        <h1 className={`${Bebas.className} uppercase leading-none flex items-start lg:text-4xl text-5xl z-20`}>SELECTED WORK <span className="lg:text-base text-lg pl-1 text-gray-foreground flex leading-none">[3]</span></h1>
+                        <h1 className={`${Bebas.className} uppercase leading-none flex items-start text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl z-20`}>SELECTED WORK <span className="lg:text-base text-xs pl-1 text-gray-foreground flex leading-none lg:block xxs:hidden">[3]</span></h1>
                     </div>
-                    <p className="text-sm">A piece from my selection of favorites</p>
+                    <p className="xxs:text-xs md:text-base">A piece from my selection of favorites</p>
 
                 </motion.div>
                 <BentoGrid className="max-w-4xl mx-auto md:auto-rows-[20rem]">
@@ -80,9 +80,9 @@ export default function Projects() {
                         duration: 0.8,
                         ease: 'easeInOut'}} >
                     <div className="mt-8 lg:mt-4 before:absolute before:h-[3px] before:w-full before:bg-amber-400 before:top-0 mb-8 pb-8 lg:mb-4 lg:pb-4">
-                        <h3 className={`${Bebas.className} text-3xl lg:text-2xl uppercase`}>Want to see more?</h3>
-                        <p className={`text-lg font-normal lg:text-sm`}> Reach me out at
-                            <Button variant="ghost"><a href="mailto:Ashvinjeetsingh22@gmail.com"
+                        <h3 className={`${Bebas.className} text-2xl lg:text-2xl xl:text-3xl 2xl:text-4xl uppercase`}>Want to see more?</h3>
+                        <p className={` font-normal lg:text-md xxs:text-base`}> Reach me out at
+                            <Button variant="ghost" className="xxs:pl-0 md:pl-1 sm:pl-4"><a href="mailto:Ashvinjeetsingh22@gmail.com"
                             className={`${styles.link} no-underline text-lg lg:text-base italic font-medium`}>Ashvinjeetsingh22@gmail.com</a></Button>
 
 
