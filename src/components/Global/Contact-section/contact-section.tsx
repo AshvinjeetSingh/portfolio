@@ -22,7 +22,7 @@ const ContactSection = (props: Props) => {
         <section className="h-full w-full  dark:bg-black bg-white rounded-md  overflow-visible relative flex flex-col items-center  antialiased text-black dark:text-white" id="contact">
             <div className='text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white 2xl:max-w-4xl  xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg xs:max-w-sm xxs:max-w-xsl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left lg:py-36 py-12'>
                 <div ref={description} className="flex justify-center">
-                    <div className={`${styles.body} flex relative lg:gap-12 gap-5 xxs:flex-wrap `}>
+                    <div className={`${styles.body} flex relative lg:gap-12 gap-5 xxs:flex-wrap lg:flex-nowrap`}>
                         <p className=' [&>*:nth-child(1)]:gap-2 xxs:text-base  md:text-lg leading-7 font-normal tracking-wide [word-spacing:-20px] '>
                         {
                             phrase.split(" ").map( (word, index) => {
