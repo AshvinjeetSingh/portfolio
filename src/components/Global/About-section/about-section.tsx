@@ -25,10 +25,12 @@ const AboutSection = (props: Props) => {
     const phrase2 = "I'm all about that sweet spot where creativity meets tech. I get a kick out of working on frontend projects that not only look awesome but also run like a well - oiled machine.You know, the kind that challenges you to make things both super fast and super slick.";
     const description = useRef(null);
     const isInView = useInView(description)
+    const watToDo=useRef(null);
+    const isInView2 = useInView(watToDo)
     return (
         <section className="h-full w-full  dark:bg-black bg-white rounded-md  !overflow-visible relative flex flex-col items-center  antialiased" id="about">
 
-            <div className='text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white max-w-4xl lg:max-w-3xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left pt-36 pb-18 '>
+            <div className='text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white  2xl:max-w-4xl  xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg xs:max-w-sm xxs:max-w-xs leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left pt-36 pb-18 '>
 
 
                 <div className={`mb-9 `} ref={description}>
@@ -53,7 +55,7 @@ const AboutSection = (props: Props) => {
                     </p>
                 </div>
                 </div>
-                <div>
+                <div >
 
 
                     <div className={`${Bebas.className} lg:text-3xl text-4xl uppercase leading-9 mb-8`}>
@@ -68,17 +70,17 @@ const AboutSection = (props: Props) => {
                     @include themify($themes) {
                         background - color: themed('smallLine');
                         } */}
-                    <div className='grid md:grid-cols-3 md:gap-x-5 relative overflow-hidden gap-y-5'>
-                        <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} animate={isInView ? "open" : "closed"}>
+                    <div className='grid md:grid-cols-3 md:gap-x-5 relative overflow-hidden gap-y-5' >
+                        <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} ref={watToDo}  animate={isInView2 ? "open" : "closed"}>
                             <span><img src="../images/rhom.svg" alt="icon" className='mb-4'/></span>
                             <h2 className={`${Bebas.className} lg:text-2xl text-3xl mb-2`}>Design</h2>
                             <p className={`text-base lg:text-sm font-normal leading-6`}> make web designs that engage your audience and create the user experience you want.</p>
                         </motion.div>
-                        <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} animate={isInView ? "open" : "closed"}><span className='mb-4'><img src="../images/parrallelogram.svg" alt="icon" className='mb-4' /></span>
+                        <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} animate={isInView2 ? "open" : "closed"}><span className='mb-4'><img src="../images/parrallelogram.svg" alt="icon" className='mb-4' /></span>
                             <h2 className={`${Bebas.className} lg:text-2xl text-3xl mb-2`}>Development</h2>
                             <p className={` text-base lg:text-sm font-normal leading-6`}>Bringing visuals to life through developing highly functional web solutions.</p>
                         </motion.div>
-                        <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} animate={isInView ? "open" : "closed"}><span><img src="../images/triangle.svg" alt="icon" className='mb-4' /></span>
+                        <motion.div className='pl-10 relative before:absolute before:w-1 before:h-full before:left-0 before:bg-gray-200' variants={slideRight} animate={isInView2 ? "open" : "closed"}><span><img src="../images/triangle.svg" alt="icon" className='mb-4' /></span>
                             <h2 className={`${Bebas.className} lg:text-2xl text-3xl mb-2`}>SEO</h2>
                             <p className={` text-base lg:text-sm font-normal leading-6`}>Jazzing up your online game, boosting visibility in search rankings and digital
                                 landscape!</p>

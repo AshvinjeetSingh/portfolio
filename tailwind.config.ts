@@ -14,6 +14,15 @@ const config = {
   ],
   prefix: "",
   theme: {
+    screens: {
+      "xxs":"350px",
+      "xs": "420px",
+      sm: "640px",
+      md: "768px",
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+    },
     container: {
       center: true,
       padding: "2rem",
@@ -84,7 +93,7 @@ const config = {
         2: "url(/images/main_home_black.png)",
         3: "url(/images/knowYourCoin.png)",
         4: "url(/images/main_Eng4.png)",
-        "hero": "url('/images/Autopulse.png')",
+        hero: "url('/images/Autopulse.png')",
         "basic-bg": "url('/images/Autopulse.png')",
         "team-bg": "url('/images/Autopulse.png')",
       },

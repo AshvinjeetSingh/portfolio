@@ -7,6 +7,7 @@ import Logo_Light from "../../../../public/Images/logo.svg"
 import Logo_Dark from "../../../../public/Images/logo_2.svg"
 import { useTheme } from 'next-themes'
 import HamburgerMenu from '../Hamburger-menu/hamburger-menu'
+import styles from "./style.module.scss"
 type Props = {}
 
 const Navbar = (props: Props) => {
@@ -20,8 +21,7 @@ const Navbar = (props: Props) => {
     return (
         <header className='fixed right-0 left-0 top-0 py-4 px-4 dark:bg-black/40 bg-white/20 backdrop-blur-lg z-[100] flex items-center border-b-[1px] dark:border-neutral-900  justify-between text-gray-900 dark:text-white'>
             <aside className='flex items-center gap-[2px]'>
-                {theme && theme=="light"?<Image src={Logo_Light} alt="logo" width={50}
-                    height={50} />:<Image src={Logo_Dark} alt="logo" width={50}
+                {theme == "light" ? <Image src={Logo_Light} alt="logo" className={styles.logoImage}/>:<Image src={Logo_Dark} alt="logo" width={50}
                         height={50} />}
             </aside>
             <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block ">

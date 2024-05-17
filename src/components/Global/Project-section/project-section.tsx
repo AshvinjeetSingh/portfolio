@@ -31,7 +31,7 @@ const Bebas = Bebas_Neue({
 export default function Projects() {
     return (
         <section className="h-full w-full  dark:bg-black bg-white rounded-md  !overflow-visible relative flex flex-col items-center  antialiased" id="projects">
-                <div className='text-lg md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white lg:max-w-3xl max-w-4xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left pt-36 pb-18'>
+            <div className='text-lg md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white  2xl:max-w-4xl  xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg xs:max-w-sm xxs:max-w-xs leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left pt-36 pb-18'>
                 {/* <LampComponent/> */}
                 {/* <div className="flex relative items-end text-3xl justify-between after:h-[3px] after:w-full after:bg-amber-400 after:absolute after:bottom-0 mb-8 pb-8">
                     <div>

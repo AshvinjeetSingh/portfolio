@@ -19,7 +19,7 @@ const ContactSection = (props: Props) => {
     const isInView = useInView(description)
     return (
         <section className="h-full w-full  dark:bg-black bg-white rounded-md  overflow-visible relative flex flex-col items-center  antialiased text-black dark:text-white" id="contact">
-            <div className='text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white md:max-w-3xl max-w-4xl lg:max-w-3xlleading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left py-36'>
+            <div className='text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white 2xl:max-w-4xl xl:max-w-3xl lg:max-w-2xl md:max-w-xl leading-relaxed lg:leading-snug  mx-auto z-10 justify-between align-baseline flex flex-col text-left py-36'>
                 <div ref={description} className="flex justify-center">
                     <div className={`${styles.body} flex relative gap-12 `}>
                         <p className=' [&>*:nth-child(1)]:gap-2 text-base lg:text-sm leading-7 font-normal tracking-wide [word-spacing:-20px] '>

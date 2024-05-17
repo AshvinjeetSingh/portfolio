@@ -37,13 +37,13 @@ const HeroSection = (props: Props) => {
             <RightLink />
             {/* <!-- rIGHT LINK END--> */}
             {/* <TextGenerateEffect words={Words} /> */}
-            <HeroHighlight className="text-lg px-4 md:text-lg lg:text-2xl font-bold text-neutral-700 dark:text-white lg:max-w-3xl   2xl:max-w-4xl leading-relaxed lg:leading-snug text-center mx-auto z-10 flex justify-between align-baseline">
+            <HeroHighlight className=" text-neutral-700 dark:text-white  2xl:max-w-4xl  xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg xs:max-w-sm xxs:max-w-xs leading-relaxed lg:leading-snug text-center mx-auto z-10 flex justify-between align-baseline">
 
 
                 <div className="text-left flex justify-center items-baseline flex-col z-20" ref={heading}>
                     {/* <DotLottiePlayer/> */}
-                    <h3 className={`leading-7 font-light uppercase tracking-wide text-gray-400 text-sm mb-0.5 z-2 cursor-default`}>Web developer</h3>
-                    <h4 className={`[&>*:nth-child(1)]:gap-2 leading16 font-extrabold uppercase tracking-wide lg:text-4xl 2xl:text-5xl mb-4 z-2 cursor-default ${Bebas.className}`}>
+                    <h3 className={`${Bebas.className} leading-7 font-light uppercase tracking-wider text-gray-400 text-sm mb-0.5 z-2 cursor-default`}>Web developer</h3>
+                    <h4 className={`[&>*:nth-child(1)]:gap-2 font-extrabold uppercase tracking-wide text-3xl lg:text-3xl xl:text-4xl 2xl:text-5xl mb-3 z-2 cursor-default ${Bebas.className}`}>
                         {phrase.split(" ").map((word, index) => {
                             return <span key={index} className="mr-2 relative overflow-hidden inline-flex [&>*:nth-child(2)]:text-base  [&>*:nth-child(2)]:font-light  [&>*:nth-child(2)]:w-[80%]]"><motion.span variants={slideUp} custom={index} animate={isInView2 ? "open" : "closed"} key={index}>{`${word}\t`}</motion.span></span>
                         })}
@@ -52,18 +52,17 @@ const HeroSection = (props: Props) => {
                             return <span key={index} className="mr-2 relative overflow-hidden inline-flex [&>*:nth-child(2)]:text-base  [&>*:nth-child(2)]:font-light  [&>*:nth-child(2)]:w-[80%]]"><motion.span variants={slideUp} custom={index} animate={isInView2 ? "open" : "closed"} key={index}>{`${word}\t`}</motion.span></span>
                         })}
                     </h4>
-                    <motion.p ref={para} className={`leading-6 font-light tracking-wide 2xl:text-lg lg:text-sm capitalize  2xl:mb-20 lg:mb-10 z-2 cursor-default`} variants={opacity} animate={isInView ? "open" : "closed"} >Crafting Innovative Solutions Tailored Specifically to Capture and Amplify the Essence of Your
+                    <motion.p ref={para} className={`leading-6 font-light tracking-wide 2xl:text-lg xl:text-md lg:text-sm capitalize  2xl:mb-20 xl:mb-10 mb-5 z-2 cursor-default`} variants={opacity} animate={isInView ? "open" : "closed"} >Crafting Innovative Solutions Tailored Specifically to Capture and Amplify the Essence of Your
                         Distinct Brand
                        Identity,
                         Elevating Your Online Presence to Unprecedented Heights of Recognition and Impact.</motion.p>
 
-                    <div className={` flex justify-between w-full 2xl:text-sm lg:text-xs font-light flex-wrap `}>
-                        <div >
-
-                            <p>Currently Available for<br />Freelance Projects</p>
-                        </div>
-                        <p>Based in <br />Toronto,CN <span></span></p>
-                        <p>My Local Time:<br /><span id="l_time">{date.toDateString()}
+                    {/* <div className={` flex justify-between w-full font-light flex-wrap 2xl:text-lg xl:text-md lg:text-sm `}> */}
+                    <div className={` w-full grid grid-cols-3 gap-5 relative overflow-hidden text-justify xxs:mt-5`}>
+                       
+                        <p className='text-left 2xl:text-lg xl:text-md lg:text-sm text-xs'>Currently Available for<br />Freelance Projects</p>
+                        <p className='text-center 2xl:text-lg xl:text-md lg:text-sm text-xs'>Based in <br />Toronto,CN </p>
+                        <p className='text-right 2xl:text-lg xl:text-md lg:text-sm text-xs'>My Local Time:<br /><span id="l_time">{date.toDateString()}
                         </span></p>
                     </div>
                 </div>
