@@ -6,8 +6,7 @@ import RightLink from '../Links/right-link'
 import { HeroHighlight } from './hero-highlight'
 import { Bebas_Neue } from "@next/font/google";
 import { motion, useInView } from "framer-motion"
-import localFont from "@next/font/local";
-import { LocalTime } from '../localtime';
+import { Ca } from "react-flags-select";
 import { opacity, slideUp } from './anim';
 
 
@@ -61,7 +60,7 @@ const HeroSection = (props: Props) => {
                     <div className={` w-full grid grid-cols-3 gap-5 relative overflow-hidden text-justify xxs:mt-5`}>
                        
                         <p className='text-left 2xl:text-lg xl:text-md lg:text-sm text-xs'>Currently Available for<br />Freelance Projects</p>
-                        <p className='text-center 2xl:text-lg xl:text-md lg:text-sm text-xs'>Based in <br />Toronto,CN </p>
+                        <p className='text-center 2xl:text-lg xl:text-md lg:text-sm text-xs'>Based in <br /><span className='flex justify-items-center'>Toronto,CN &nbsp;<Ca /></span></p>
                         <p className='text-right 2xl:text-lg xl:text-md lg:text-sm text-xs'>My Local Time:<br /><span id="l_time">{date.toDateString()}
                         </span></p>
                     </div>
