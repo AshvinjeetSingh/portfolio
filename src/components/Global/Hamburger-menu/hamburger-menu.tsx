@@ -18,17 +18,17 @@ const navItems = [
         href: "/",
     },
     {
-        title: "Work",
-        href: "/work",
+        title: "About",
+        href: "#about",
     },
 
     {
-        title: "About",
-        href: "/about",
+        title: "Project",
+        href: "#project",
     },
     {
         title: "Contact",
-        href: "/contact",
+        href: "#contact",
     },
 
 ]
@@ -56,7 +56,7 @@ const HamburgerMenu = (props: Props) => {
             </div>
             <AnimatePresence mode="wait">
                 {isActive && 
-                <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={styles.menu}>
+                <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={`${styles.menu} dark:bg-[#1c1c1c] bg-white text-black dark:text-white`}>
                     <div className={styles.body}>
                         <div onMouseLeave={() => { setSelectedIndicator(pathname) }} className={styles.nav}>
                             <div className={styles.header}>
@@ -64,7 +64,7 @@ const HamburgerMenu = (props: Props) => {
                             </div>
                             {
                                 navItems.map((data, index) => {
-                                    return <Link key={index} data={{ ...data, index }} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator}></Link>
+                                    return <Link key={index} data={{ ...data, index }} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator} ></Link>
                                 })
                             }
                         </div>

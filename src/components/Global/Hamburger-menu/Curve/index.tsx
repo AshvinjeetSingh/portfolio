@@ -24,7 +24,7 @@ const index = (props: Props) => {
 
 
     return (
-        <svg className={styles.svgCurve}>
+        <svg className={`${styles.svgCurve} fill-[white] dark:fill-[#1c1c1c]`}>
             <motion.path variants={curve} initial="initial" animate="enter" exit="exit"></motion.path>
         </svg>
     )
