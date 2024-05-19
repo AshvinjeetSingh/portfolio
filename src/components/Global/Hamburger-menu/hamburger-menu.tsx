@@ -8,8 +8,6 @@ import { motion } from 'framer-motion';
 import { menuSlide } from './anim';
 import Link from "./Link/index"
 import Curve from "./Curve/index"
-import useHash from '@/Providers/hash';
-import { scrollToSection } from '@/lib/utils';
 
 type Props = {}
 
@@ -36,17 +34,15 @@ const navItems = [
 ]
 
 const HamburgerMenu = (props: Props) => {
-    // const params=useHash()
     const [isActive, setIsActive] = useState(false);
     const pathname = usePathname();
     const [selectedIndicator, setSelectedIndicator] = useState(pathname);
-    const hash = useHash();
-    useEffect(() => {
-        const section = hash.replace("#", "");
-        console.log("Hash",section)
-        if (section) scrollToSection(section);
-        if(isActive) setIsActive(false)
-    }, [hash]);
+    // useEffect(() => {
+    //     const section = hash.replace("#", "");
+    //     console.log("Hash",section)
+    //     if (section) scrollToSection(section);
+    //     if(isActive) setIsActive(false)
+    // }, [hash]);
 
     // useEffect(() => {
     //     // console.log("pathname",pathname)
@@ -60,13 +56,13 @@ const HamburgerMenu = (props: Props) => {
     // }
     // , [window.location.hash])
 
-    useEffect(() => {
-        const onHashChange = () => {
-            setHash(window.location.hash);
-        };
-        window.addEventListener('hashchange', onHashChange);
-        return () => window.removeEventListener('hashchange', onHashChange);
-    }, []);
+    // useEffect(() => {
+    //     const onHashChange = () => {
+    //         setHash(window.location.hash);
+    //     };
+    //     window.addEventListener('hashchange', onHashChange);
+    //     return () => window.removeEventListener('hashchange', onHashChange);
+    // }, []);
 
 
 
