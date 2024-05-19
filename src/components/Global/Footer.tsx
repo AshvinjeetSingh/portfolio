@@ -51,9 +51,9 @@ const Logos = ({ scrollProgress }) => {
                             Made With Love<span className='text-sm'>&copy;2024</span>
                         </p>
                         <ul className='flex text-white dark:text-black'>
-                            <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 "><a href="https://github.com/AshvinjeetSingh"><Github /></a></li>
-                            <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="www.linkedin.com/in/ashvinjeetsingh"><LinkedinIcon /></a></li>
-                            <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="https://twitter.com/AshvinjeetS"><Twitter /></a></li>
+                            <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 "><a href="https://github.com/AshvinjeetSingh" target="_blank" rel="noopener noreferrer"><Github /></a></li>
+                            <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="https://www.linkedin.com/in/ashvinjeetsingh" target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a></li>
+                            <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="https://twitter.com/AshvinjeetS" target="_blank" rel="noopener noreferrer"><Twitter /></a></li>
                         </ul>
                     
                     </>
