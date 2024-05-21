@@ -8,6 +8,7 @@ import { Bebas_Neue } from "@next/font/google";
 import { motion, useInView } from "framer-motion"
 import { Ca } from "react-flags-select";
 import { opacity, slideUp } from './anim';
+import ResumeDownload from "../resume-download"
 
 
 type Props = {}
@@ -35,6 +36,8 @@ const HeroSection = (props: Props) => {
             {/* <!-- RIGHT LINK sTART--> */}
             <RightLink />
             {/* <!-- rIGHT LINK END--> */}
+
+            <ResumeDownload/>
             {/* <TextGenerateEffect words={Words} /> */}
             <HeroHighlight className=" text-neutral-700 dark:text-white  2xl:max-w-4xl  xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg xs:max-w-sm xxs:max-w-xs leading-relaxed lg:leading-snug text-center mx-auto z-10 flex justify-between align-baseline">
 
