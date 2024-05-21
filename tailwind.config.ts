@@ -15,13 +15,14 @@ const config = {
   prefix: "",
   theme: {
     screens: {
-      "xxs":"350px",
-      "xs": "420px",
+      xxs: "350px",
+      xs: "420px",
       sm: "640px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
       "2xl": "1536px",
+      "maxMd": { max: "990px" },
     },
     container: {
       center: true,
