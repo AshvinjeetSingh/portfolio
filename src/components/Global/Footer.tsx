@@ -5,7 +5,7 @@ import React, { useEffect, useRef } from 'react'
 import { useScroll, useTransform, motion } from 'framer-motion';
 import Image from 'next/image';
 import { Bebas_Neue } from '@next/font/google';
-import { Github, LinkedinIcon, Twitter } from 'lucide-react';
+import { ArrowDownToLineIcon, Github, LinkedinIcon, Twitter } from 'lucide-react';
 
 type Props = {}
 // @ts-ignore
@@ -54,6 +54,9 @@ const Logos = ({ scrollProgress }) => {
                             <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400 "><a href="https://github.com/AshvinjeetSingh" target="_blank" rel="noopener noreferrer"><Github /></a></li>
                             <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="https://www.linkedin.com/in/ashvinjeetsingh" target="_blank" rel="noopener noreferrer"><LinkedinIcon /></a></li>
                             <li className="px-3 text-white dark:text-black transition-all duration-500 hover:text-amber-400 dark:hover:text-amber-400"><a href="https://twitter.com/AshvinjeetS" target="_blank" rel="noopener noreferrer"><Twitter /></a></li>
+                            <li className="px-3 text-white dark:text-black transition-all duration-500  h-full hover:text-amber-400 dark:hover:text-amber-400">
+                                <a href="/CV.pdf" download="cv" ><ArrowDownToLineIcon /></a>
+                            </li>
                         </ul>
                     
                     </>
