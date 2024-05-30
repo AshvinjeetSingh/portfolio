@@ -9,6 +9,7 @@ import { motion, useInView } from "framer-motion"
 import { Ca } from "react-flags-select";
 import { opacity, slideUp } from './anim';
 import ResumeDownload from "../resume-download"
+import { VelocityScroll } from '../scroll-based-velocity';
 
 
 type Props = {}
@@ -16,6 +17,8 @@ const Bebas = Bebas_Neue({
     weight: ['400'],
     preload: false
 })
+
+// const text = `\tHTML ◇ \tCSS ◇ \tJavascript ◇ \tTypescript ◇ \t Java ◇ \tPython ◇ \tNodeJS ◇ \tNextJS ◇ \tReactJS ◇ \tRedux ◇ \tDocker ◇ \tGit ◇ `
 
 const HeroSection = (props: Props) => {
     // const [time, setTime] = useState(post.frontmatter.date)
@@ -39,7 +42,7 @@ const HeroSection = (props: Props) => {
 
             <ResumeDownload/>
             {/* <TextGenerateEffect words={Words} /> */}
-            <HeroHighlight className=" text-neutral-700 dark:text-white  2xl:max-w-4xl  xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg xs:max-w-sm xxs:max-w-xs leading-relaxed lg:leading-snug text-center mx-auto z-10 flex justify-between align-baseline">
+            <HeroHighlight className=" text-neutral-700 dark:text-white  2xl:max-w-4xl  xl:max-w-3xl lg:max-w-2xl md:max-w-xl sm:max-w-lg xs:max-w-sm xxs:max-w-xs leading-relaxed lg:leading-snug text-center mx-auto z-10 flex justify-between align-baseline flex-col">
 
 
                 <div className="text-left flex justify-center items-baseline flex-col z-20" ref={heading}>
@@ -60,17 +63,19 @@ const HeroSection = (props: Props) => {
                         Elevating Your Online Presence to Unprecedented Heights of Recognition and Impact.</motion.p>
 
                     {/* <div className={` flex justify-between w-full font-light flex-wrap 2xl:text-lg xl:text-md lg:text-sm `}> */}
-                    <div className={` w-full grid grid-cols-3 gap-5 relative overflow-hidden text-justify xxs:mt-5`}>
+                    {/* <div className={` w-full grid grid-cols-3 gap-5 relative overflow-hidden text-justify xxs:mt-5`}>
                        
                         <p className='text-left 2xl:text-lg xl:text-md lg:text-sm text-xs'>Currently Available for<br />Freelance Projects</p>
                         <p className='text-center 2xl:text-lg xl:text-md lg:text-sm text-xs flex justify-items-center items-center flex-col'>Based in <br /><span className='flex justify-items-center items-center'>Toronto,CA &nbsp;<Ca /></span></p>
                         <p className='text-right 2xl:text-lg xl:text-md lg:text-sm text-xs'>My Local Time:<br /><span id="l_time">{date.toDateString()}
                         </span></p>
-                    </div>
+                    </div> */}
+                   
                 </div>
 
 
             </HeroHighlight>
+           
         </section>
     )
 }
