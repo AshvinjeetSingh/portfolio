@@ -142,7 +142,7 @@ const items = [
         className: "md:col-span-2",
         icon: <IconTableColumn className="h-6 w-6 text-neutral-500" />,
         Githublink: "https://github.com/engineering4-0/website",
-        websiteLink:"https://engineering4-0.club/",
+        websiteLink:"https://engineering-club-4.netlify.app/",
         backgroundImage: "/images/Eng4.png"
     },
 ];
