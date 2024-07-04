@@ -10,8 +10,6 @@ import Preloader from "@/components/Global/Preloader";
 import Projects from "@/components/Global/Project-section/project-section";
 import ContactSection from "@/components/Global/Contact-section/contact-section";
 import Footer from "@/components/Global/Footer";
-import { VelocityScroll } from "@/components/Global/scroll-based-velocity";
-const text = `\tHTML ◇ \tCSS ◇ \tJavascript ◇ \tTypescript ◇ \t Java ◇ \tPython ◇ \tNodeJS ◇ \tNextJS ◇ \tReactJS ◇ \tRedux ◇ \tDocker ◇ \tGit ◇ `
 type Props = {}
 export default function Home(props:Props) {
   const Words = `Developer Designer Probem Solver`
@@ -40,11 +38,6 @@ export default function Home(props:Props) {
       <HeroSection />
       <AboutSection />
       <Projects/>
-      <VelocityScroll
-        text={text}
-        default_velocity={1}
-        className="font-display text-center text-sm font-bold tracking-[0.1em] text-black drop-shadow-sm dark:text-white md:text-3xl md:leading-[3rem] uppercase my-1"
-      />
       <ContactSection/>
       <Footer />
 

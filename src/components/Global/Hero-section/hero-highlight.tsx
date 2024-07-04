@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 import { useMotionValue, motion, useMotionTemplate } from "framer-motion";
 import React from "react";
 import { VelocityScroll } from "../scroll-based-velocity";
-const text = `\tHTML ◇ \tCSS ◇ \tJavascript ◇ \tTypescript ◇ \t Java ◇ \tPython ◇ \tNodeJS ◇ \tNextJS ◇ \tReactJS ◇ \tRedux ◇ \tDocker ◇ \tGit ◇ `
+const text = `\tHTML ◇ \tCSS ◇ \tJavascript ◇ \tTypescript ◇ \t Java ◇ \tSpringBoot ◇ \tNodeJS ◇ \tNextJS ◇ \tReactJS ◇ \tRedux ◇ \tDocker ◇ \tAWS ◇ \tGit ◇ \Framer ◇`
 export const HeroHighlight = ({
     children,
     className,
@@ -28,6 +28,7 @@ export const HeroHighlight = ({
         mouseY.set(clientY - top);
     }
     return (
+        <>
         <div
             className={cn(
                 "relative h-screen flex flex-col items-center bg-white dark:bg-black justify-center w-full group",
@@ -47,22 +48,24 @@ export const HeroHighlight = ({
             )
           `,
                     maskImage: useMotionTemplate`
-            radial-gradient(
-              200px circle at ${mouseX}px ${mouseY}px,
-              black 0%,
+                    radial-gradient(
+                        200px circle at ${mouseX}px ${mouseY}px,
+                        black 0%,
               transparent 100%
             )
-          `,
+            `,
                 }}
             />
 
             <div className={cn("relative z-20", className)}>{children}</div>
-            {/* <VelocityScroll
-                text={text}
-                default_velocity={1}
-                className="font-display text-center text-sm font-bold tracking-[0.1em] text-black drop-shadow-sm dark:text-white md:text-3xl md:leading-[3rem] uppercase my-1"
-            /> */}
+                <VelocityScroll
+                    text={text}
+                    default_velocity={1}
+                    className="font-display text-center text-sm font-bold tracking-[0.1em] text-black drop-shadow-sm dark:text-white md:text-3xl md:leading-[3rem] uppercase my-1"
+                />
         </div>
+           
+    </>
     );
 };
 
@@ -75,7 +78,7 @@ export const Highlight = ({
 }) => {
     return (
         <motion.span
-            initial={{
+        initial={{
                 backgroundSize: "0% 100%",
             }}
             animate={{
